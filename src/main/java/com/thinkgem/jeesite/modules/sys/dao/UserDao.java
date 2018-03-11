@@ -78,4 +78,12 @@ public interface UserDao extends CrudDao<User> {
 	 * @return
 	 */
 	List<User> findComList(User user);
+
+	/**
+	 * 查找还没有审核的用户
+	 * @param user
+	 * @return
+	 */
+	List<User> findcheckList(User user);
+
 }

@@ -104,7 +104,24 @@ public class SystemService extends BaseService implements InitializingBean {
 		}
 		return page;
 	}
-	
+
+
+	public Page<User> findCheckUser(Page<User> userPage, User user) {
+		// 设置分页参数
+		user.setPage(userPage);
+		userPage.setList(userDao.findcheckList(user));
+		return userPage;
+	}
+
+	@Transactional(readOnly = false)
+	public void updateCheck(User user) {
+		user.setLoginFlag("1");
+		userDao.update(user);
+		System.out.println(user.getId() + "*****" + user.getLoginFlag());
+		// 清除用户缓存
+		UserUtils.clearCache(user);
+	}
+
 	/**
 	 * 无分页查询人员列表
 	 * @param user

@@ -75,7 +75,24 @@ public class UserController extends BaseController {
         model.addAttribute("page", page);
 		return "modules/sys/userList";
 	}
-	
+
+	@RequiresPermissions("sys:user:view")
+	@RequestMapping(value = {"checklist"})
+	public String checkList(User user, HttpServletRequest request, HttpServletResponse response, Model model){
+		Page<User> page = systemService.findCheckUser(new Page<User>(request,response),user);
+		model.addAttribute("page",page);
+		return "modules/sys/checkUserList";
+	}
+
+	@RequiresPermissions("sys:user:edit")
+	@RequestMapping(value = {"updateCheck"})
+	public String updateCheck(User user){
+		System.out.println(user.getId() +"*****"+ user.getLoginFlag());
+		systemService.updateCheck(user);
+		//return "redirect:" + adminPath + "/sys/user/checkUserList";
+		return "modules/sys/checkUserList";
+	}
+
 	@ResponseBody
 	@RequiresPermissions("sys:user:view")
 	@RequestMapping(value = {"listData"})
@@ -96,6 +113,20 @@ public class UserController extends BaseController {
 		model.addAttribute("user", user);
 		model.addAttribute("allRoles", systemService.findAllRole());
 		return "modules/sys/userForm";
+	}
+
+	@RequiresPermissions("sys:user:view")
+	@RequestMapping(value = "checkForm")
+	public String checkForm(User user, Model model){
+		if (user.getCompany()==null || user.getCompany().getId()==null){
+			user.setCompany(UserUtils.getUser().getCompany());
+		}
+		if (user.getOffice()==null || user.getOffice().getId()==null){
+			user.setOffice(UserUtils.getUser().getOffice());
+		}
+		model.addAttribute("user", user);
+		model.addAttribute("allRoles", systemService.findAllRole());
+		return "modules/sys/checkUserForm";
 	}
 
 	@RequiresPermissions("sys:user:edit")
