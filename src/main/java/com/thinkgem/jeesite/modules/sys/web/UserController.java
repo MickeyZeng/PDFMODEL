@@ -172,7 +172,8 @@ public class UserController extends BaseController {
 	
 	@RequiresPermissions("sys:user:edit")
 	@RequestMapping(value = "delete")
-	public String delete(User user, RedirectAttributes redirectAttributes) {
+	public String delete(User user, RedirectAttributes redirectAttributes) throws Exception {
+		int flag = 1 ;
 		if(Global.isDemoMode()){
 			addMessage(redirectAttributes, "演示模式，不允许操作！");
 			return "redirect:" + adminPath + "/sys/user/list?repage";
@@ -182,8 +183,15 @@ public class UserController extends BaseController {
 		}else if (User.isAdmin(user.getId())){
 			addMessage(redirectAttributes, "删除用户失败, 不允许删除超级管理员用户");
 		}else{
+			if(user.getLoginFlag().equals("0")) {
+				flag = 0 ;
+			}
+			systemService.sendMail(user);
 			systemService.deleteUser(user);
 			addMessage(redirectAttributes, "删除用户成功");
+		}
+		if( flag == 0 ) {
+			return "redirect:" + adminPath + "/sys/user/checklist?repage";
 		}
 		return "redirect:" + adminPath + "/sys/user/list?repage";
 	}

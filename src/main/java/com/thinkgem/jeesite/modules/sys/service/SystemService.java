@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import com.thinkgem.jeesite.common.utils.EmailUtils;
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.Group;
 import org.apache.shiro.session.Session;
@@ -562,6 +563,10 @@ public class SystemService extends BaseService implements InitializingBean {
 			String userId = user.getLoginName();//ObjectUtils.toString(user.getId());
 			identityService.deleteUser(userId);
 		}
+	}
+
+	public void sendMail(User user) throws Exception {
+		EmailUtils.WriteLetter(user.getEmail());
 	}
 
 	///////////////// Synchronized to the Activiti end //////////////////

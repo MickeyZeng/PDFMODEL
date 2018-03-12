@@ -18,7 +18,7 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
  * @version 2013-11-04
  */
 @XStreamAlias("Properties")
-public class Properties {
+public class Properties extends java.util.Properties {
 	
 	/**
 	 * Treelist的ID	串
