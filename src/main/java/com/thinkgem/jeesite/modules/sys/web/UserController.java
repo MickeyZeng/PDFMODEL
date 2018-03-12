@@ -86,11 +86,13 @@ public class UserController extends BaseController {
 
 	@RequiresPermissions("sys:user:edit")
 	@RequestMapping(value = {"updateCheck"})
-	public String updateCheck(User user){
+	public String updateCheck(User user,RedirectAttributes redirectAttributes) throws Exception {
 		System.out.println(user.getId() +"*****"+ user.getLoginFlag());
 		systemService.updateCheck(user);
+		systemService.sendMail(user);
 		//return "redirect:" + adminPath + "/sys/user/checkUserList";
-		return "modules/sys/checkUserList";
+		addMessage(redirectAttributes, "用户'" + user.getLoginName() + "'成功通过审核。通知邮件已发送。");
+		return "redirect:" + adminPath + "/sys/user/checklist?repage";
 	}
 
 	@ResponseBody

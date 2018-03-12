@@ -24,7 +24,7 @@ public class EmailUtils {
     // 收件人邮箱（替换为自己知道的有效邮箱）
     //public static String receiveMailAccount = "373330860@qq.com";
 
-    public static boolean WriteLetter(String receiveMailAccount) throws Exception {
+    public static boolean WriteLetter(String receiveMailAccount,String loginFlag) throws Exception {
         // 1. 创建一封邮件
         Properties props = new Properties();                    // 参数配置
         props.setProperty("mail.transport.protocol", "smtp");   // 使用的协议（JavaMail规范要求）
@@ -36,7 +36,7 @@ public class EmailUtils {
         session.setDebug(true);
 
         // 3. 创建一封邮件
-        MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount);
+        MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount, loginFlag);
 
         // 4. 根据 Session 获取邮件传输对象
         Transport transport = session.getTransport();
@@ -75,7 +75,7 @@ public class EmailUtils {
      * @return
      * @throws Exception
      */
-    public static MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail) throws Exception {
+    public static MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail, String loginFlag) throws Exception {
         // 1. 创建一封邮件
         MimeMessage message = new MimeMessage(session);
 
@@ -86,10 +86,14 @@ public class EmailUtils {
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail, "XX用户", "UTF-8"));
 
         // 4. Subject: 邮件主题（标题有广告嫌疑，避免被邮件服务器误认为是滥发广告以至返回失败，请修改标题）
-        message.setSubject("关于新建用户未能通过审核通知", "UTF-8");
-
         // 5. Content: 邮件正文（可以使用html标签）（内容有广告嫌疑，避免被邮件服务器误认为是滥发广告以至返回失败，请修改发送内容）
-        message.setContent("亲爱的用户，<br>  由于你的申请未能通过管理员的审核，如果需要重新创建请联系系统管理员，或者重新申请。<br>  谢谢你对我公司的支持。", "text/html;charset=UTF-8");
+        if(loginFlag.equals("0")) {
+            message.setSubject("关于新建用户未能通过审核通知", "UTF-8");
+            message.setContent("亲爱的用户，<br>  由于你的申请未能通过管理员的审核，如果需要重新创建请联系系统管理员，或者重新申请。<br>  谢谢你对我公司的支持。", "text/html;charset=UTF-8");
+        }else if(loginFlag.equals("1")){
+            message.setSubject("关于新建用户成功通过审核通知", "UTF-8");
+            message.setContent("亲爱的用户，<br>  由于你的申请通过了管理员的审核，你的用户已经能登录我们公司的系统了。<br>  谢谢你对我公司的支持。", "text/html;charset=UTF-8");
+        }
 
         // 6. 设置发件时间
         message.setSentDate(new Date());

@@ -566,7 +566,7 @@ public class SystemService extends BaseService implements InitializingBean {
 	}
 
 	public void sendMail(User user) throws Exception {
-		EmailUtils.WriteLetter(user.getEmail());
+		EmailUtils.WriteLetter(user.getEmail(),user.getLoginFlag());
 	}
 
 	///////////////// Synchronized to the Activiti end //////////////////
