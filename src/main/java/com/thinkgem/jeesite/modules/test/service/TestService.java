@@ -18,5 +18,4 @@ import com.thinkgem.jeesite.modules.test.dao.TestDao;
 @Service
 @Transactional(readOnly = true)
 public class TestService extends CrudService<TestDao, Test> {
-
 }

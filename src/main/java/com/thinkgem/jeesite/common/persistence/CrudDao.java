@@ -40,6 +40,14 @@ public interface CrudDao<T> extends BaseDao {
 	 * @return
 	 */
 	public List<T> findAllList(T entity);
+
+
+	/**
+	 * 查询该点以下的子节点
+	 * @param entity
+	 * @return
+	 */
+	public List<T> findByParentIds(T entity);
 	
 	/**
 	 * 查询所有数据列表

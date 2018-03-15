@@ -140,14 +140,14 @@ public class UserUtils {
 		@SuppressWarnings("unchecked")
 		List<Role> roleList = (List<Role>)getCache(CACHE_ROLE_LIST);
 		if (roleList == null){
-			User user = getUser();
-			if (user.isAdmin()){
+//			User user = getUser();
+//			if (user.isAdmin()){
 				roleList = roleDao.findAllList(new Role());
-			}else{
-				Role role = new Role();
-				role.getSqlMap().put("dsf", BaseService.dataScopeFilter(user.getCurrentUser(), "o", "u"));
-				roleList = roleDao.findList(role);
-			}
+//			}else{
+//				Role role = new Role();
+//				role.getSqlMap().put("dsf", BaseService.dataScopeFilter(user.getCurrentUser(), "o", "u"));
+//				roleList = roleDao.findList(role);
+//			}
 			putCache(CACHE_ROLE_LIST, roleList);
 		}
 		return roleList;
@@ -221,7 +221,7 @@ public class UserUtils {
 		}
 		return officeList;
 	}
-	
+
 	/**
 	 * 获取授权主要对象
 	 */
@@ -286,7 +286,7 @@ public class UserUtils {
 //		getCacheMap().remove(key);
 		getSession().removeAttribute(key);
 	}
-	
+
 //	public static Map<String, Object> getCacheMap(){
 //		Principal principal = getPrincipal();
 //		if(principal!=null){
