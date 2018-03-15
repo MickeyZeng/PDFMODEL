@@ -152,7 +152,7 @@ public class UserUtils {
 		}
 		return roleList;
 	}
-	
+
 	/**
 	 * 获取当前用户授权菜单
 	 * @return
@@ -173,7 +173,7 @@ public class UserUtils {
 		}
 		return menuList;
 	}
-	
+
 	/**
 	 * 获取当前用户授权的区域
 	 * @return
@@ -187,7 +187,7 @@ public class UserUtils {
 		}
 		return areaList;
 	}
-	
+
 	/**
 	 * 获取当前用户有权限访问的部门
 	 * @return
@@ -221,14 +221,14 @@ public class UserUtils {
 		}
 		return officeList;
 	}
-	
+
 	/**
 	 * 获取授权主要对象
 	 */
 	public static Subject getSubject(){
 		return SecurityUtils.getSubject();
 	}
-	
+
 	/**
 	 * 获取当前登录者对象
 	 */
@@ -241,13 +241,13 @@ public class UserUtils {
 			}
 //			subject.logout();
 		}catch (UnavailableSecurityManagerException e) {
-			
+
 		}catch (InvalidSessionException e){
-			
+
 		}
 		return null;
 	}
-	
+
 	public static Session getSession(){
 		try{
 			Subject subject = SecurityUtils.getSubject();
@@ -260,17 +260,17 @@ public class UserUtils {
 			}
 //			subject.logout();
 		}catch (InvalidSessionException e){
-			
+
 		}
 		return null;
 	}
-	
+
 	// ============== User Cache ==============
-	
+
 	public static Object getCache(String key) {
 		return getCache(key, null);
 	}
-	
+
 	public static Object getCache(String key, Object defaultValue) {
 //		Object obj = getCacheMap().get(key);
 		Object obj = getSession().getAttribute(key);
@@ -286,7 +286,7 @@ public class UserUtils {
 //		getCacheMap().remove(key);
 		getSession().removeAttribute(key);
 	}
-	
+
 //	public static Map<String, Object> getCacheMap(){
 //		Principal principal = getPrincipal();
 //		if(principal!=null){
