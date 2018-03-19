@@ -1,7 +1,7 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.thinkgem.jeesite.modules.mod.service;
+package com.thinkgem.jeesite.modules.sysmod.service;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.service.CrudService;
-import com.thinkgem.jeesite.modules.mod.entity.ModTimes;
-import com.thinkgem.jeesite.modules.mod.dao.ModTimesDao;
+import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
+import com.thinkgem.jeesite.modules.sysmod.dao.ModTimesDao;
 
 /**
- * 显示管理查询模版使用次数Service
+ * 设计模版次数Service
  * @author Mickey_zjq
- * @version 2018-03-08
+ * @version 2018-03-19
  */
 @Service
 @Transactional(readOnly = true)

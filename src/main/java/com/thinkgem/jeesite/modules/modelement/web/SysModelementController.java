@@ -106,7 +106,7 @@ public class SysModelementController extends BaseController {
 	@RequestMapping(value = "updateCheck")
 	public String updateCheck(SysModelement sysModelement, RedirectAttributes redirectAttributes) throws Exception {
 		sysModelementService.updateCheck(sysModelement);
-		//sysModelementService.sendMail(sysModelement);
+		sysModelementService.sendMail(sysModelement);
 		addMessage(redirectAttributes, "元素成功通过审核。通知邮件已发送。");
 		return "redirect:" + adminPath + "/modelement/sysModelement/checkList?repage";
 	}

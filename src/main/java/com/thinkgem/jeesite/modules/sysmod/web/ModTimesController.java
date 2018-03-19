@@ -1,7 +1,7 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.thinkgem.jeesite.modules.mod.web;
+package com.thinkgem.jeesite.modules.sysmod.web;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,16 +19,16 @@ import com.thinkgem.jeesite.common.config.Global;
 import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.common.utils.StringUtils;
-import com.thinkgem.jeesite.modules.mod.entity.ModTimes;
-import com.thinkgem.jeesite.modules.mod.service.ModTimesService;
+import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
+import com.thinkgem.jeesite.modules.sysmod.service.ModTimesService;
 
 /**
- * 显示管理查询模版使用次数Controller
+ * 设计模版次数Controller
  * @author Mickey_zjq
- * @version 2018-03-08
+ * @version 2018-03-19
  */
 @Controller
-@RequestMapping(value = "${adminPath}/mod/modTimes")
+@RequestMapping(value = "${adminPath}/sysmod/modTimes")
 public class ModTimesController extends BaseController {
 
 	@Autowired
@@ -46,38 +46,38 @@ public class ModTimesController extends BaseController {
 		return entity;
 	}
 	
-	@RequiresPermissions("mod:modTimes:view")
+	@RequiresPermissions("sysmod:modTimes:view")
 	@RequestMapping(value = {"list", ""})
 	public String list(ModTimes modTimes, HttpServletRequest request, HttpServletResponse response, Model model) {
 		Page<ModTimes> page = modTimesService.findPage(new Page<ModTimes>(request, response), modTimes); 
 		model.addAttribute("page", page);
-		return "modules/mod/modTimesList";
+		return "modules/sysmod/modTimesList";
 	}
 
-	@RequiresPermissions("mod:modTimes:view")
+	@RequiresPermissions("sysmod:modTimes:view")
 	@RequestMapping(value = "form")
 	public String form(ModTimes modTimes, Model model) {
 		model.addAttribute("modTimes", modTimes);
-		return "modules/mod/modTimesForm";
+		return "modules/sysmod/modTimesForm";
 	}
 
-	@RequiresPermissions("mod:modTimes:edit")
+	@RequiresPermissions("sysmod:modTimes:edit")
 	@RequestMapping(value = "save")
 	public String save(ModTimes modTimes, Model model, RedirectAttributes redirectAttributes) {
 		if (!beanValidator(model, modTimes)){
 			return form(modTimes, model);
 		}
 		modTimesService.save(modTimes);
-		addMessage(redirectAttributes, "保存模版次数管理成功");
-		return "redirect:"+Global.getAdminPath()+"/mod/modTimes/?repage";
+		addMessage(redirectAttributes, "保存设计模版次数成功");
+		return "redirect:"+Global.getAdminPath()+"/sysmod/modTimes/?repage";
 	}
 	
-	@RequiresPermissions("mod:modTimes:edit")
+	@RequiresPermissions("sysmod:modTimes:edit")
 	@RequestMapping(value = "delete")
 	public String delete(ModTimes modTimes, RedirectAttributes redirectAttributes) {
 		modTimesService.delete(modTimes);
-		addMessage(redirectAttributes, "删除模版次数管理成功");
-		return "redirect:"+Global.getAdminPath()+"/mod/modTimes/?repage";
+		addMessage(redirectAttributes, "删除设计模版次数成功");
+		return "redirect:"+Global.getAdminPath()+"/sysmod/modTimes/?repage";
 	}
 
 }

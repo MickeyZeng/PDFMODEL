@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS `mod_times`;
 
 CREATE TABLE `mod_times`(
 	`id` varchar(64) COLLATE utf8_bin NOT NULL COMMENT '编号',
-	`comId` varchar(10) COLLATE utf8_bin NOT NULL COMMENT '公司编号',
+	`company_id` varchar(64) COLLATE utf8_bin NOT NULL COMMENT '归属公司',
+	`user_id` varchar(64) COLLATE utf8_bin NOT NULL COMMENT '公司负责人',
 	`times` varchar(2) COLLATE utf8_bin NOT NULL COMMENT '次数',
 	`create_by` varchar(64) COLLATE utf8_bin NOT NULL COMMENT '创建者',
   	`create_date` datetime NOT NULL COMMENT '创建时间',
@@ -17,8 +18,8 @@ CREATE TABLE `mod_times`(
 
 /*Data for the table 'mod_times' */
 
-insert into `mod_times`(`id`,`comId`,`times`,`create_by`,`create_date`,`update_by`,`update_date`,`remarks`,`del_flag`) values('00001','0000000001','2','1','2013-05-27 08:00:00','1','2013-05-27 08:00:00',NULL,'0');
-insert into `mod_times`(`id`,`comId`,`times`,`create_by`,`create_date`,`update_by`,`update_date`,`remarks`,`del_flag`) values('00002','0000000013','2','1','2013-05-27 08:00:00','1','2013-05-27 08:00:00',NULL,'0');
+insert into `mod_times`(`id`,`company_id`,`user_id`,`times`,`create_by`,`create_date`,`update_by`,`update_date`,`remarks`,`del_flag`) values('1','3','7','2','1','2013-05-27 08:00:00','1','2013-05-27 08:00:00',NULL,'0');
+insert into `mod_times`(`id`,`company_id`,`user_id`,`times`,`create_by`,`create_date`,`update_by`,`update_date`,`remarks`,`del_flag`) values('2','3','7','2','1','2013-05-27 08:00:00','1','2013-05-27 08:00:00',NULL,'0');
 
 /*Tbale structure for table 'sys_modElement' */
 DROP TABLE IF EXISTS `sys_modElement`;

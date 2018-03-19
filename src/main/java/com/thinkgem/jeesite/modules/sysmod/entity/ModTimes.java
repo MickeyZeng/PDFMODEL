@@ -1,21 +1,25 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.thinkgem.jeesite.modules.mod.entity;
+package com.thinkgem.jeesite.modules.sysmod.entity;
 
+import com.thinkgem.jeesite.modules.sys.entity.Office;
+import javax.validation.constraints.NotNull;
+import com.thinkgem.jeesite.modules.sys.entity.User;
 import org.hibernate.validator.constraints.Length;
 
 import com.thinkgem.jeesite.common.persistence.DataEntity;
 
 /**
- * 显示管理查询模版使用次数Entity
+ * 设计模版次数Entity
  * @author Mickey_zjq
- * @version 2018-03-08
+ * @version 2018-03-19
  */
 public class ModTimes extends DataEntity<ModTimes> {
 	
 	private static final long serialVersionUID = 1L;
-	private String comid;		// 公司编号
+	private Office company;		// 归属公司
+	private User user;		// 公司负责人
 	private String times;		// 次数
 	
 	public ModTimes() {
@@ -26,13 +30,22 @@ public class ModTimes extends DataEntity<ModTimes> {
 		super(id);
 	}
 
-	@Length(min=1, max=10, message="公司编号长度必须介于 1 和 10 之间")
-	public String getComid() {
-		return comid;
+	@NotNull(message="归属公司不能为空")
+	public Office getCompany() {
+		return company;
 	}
 
-	public void setComid(String comid) {
-		this.comid = comid;
+	public void setCompany(Office company) {
+		this.company = company;
+	}
+	
+	@NotNull(message="公司负责人不能为空")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	@Length(min=1, max=2, message="次数长度必须介于 1 和 2 之间")
