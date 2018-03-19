@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.modelement.dao.SysModelementDao">
+    
+	<sql id="sysModelementColumns">
+		a.id AS "id",
+		a.elementname AS "elementname",
+		a.pdfelementname AS "pdfelementname",
+		a.company_id AS "company.id",
+		a.office_id AS "office.id",
+		a.use_flag AS "useFlag",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		o4.name AS "company.name",
+		o5.name AS "office.name"
+	</sql>
+	
+	<sql id="sysModelementJoins">
+		LEFT JOIN sys_office o4 ON o4.id = a.company_id
+		LEFT JOIN sys_office o5 ON o5.id = a.office_id
+	</sql>
+    
+	<select id="get" resultType="SysModelement">
+		SELECT 
+			<include refid="sysModelementColumns"/>
+		FROM sys_modelement a
+		<include refid="sysModelementJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="SysModelement">
+		SELECT 
+			<include refid="sysModelementColumns"/>
+		FROM sys_modelement a
+		<include refid="sysModelementJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="elementname != null and elementname != ''">
+				AND a.elementname LIKE 
+					<if test="dbName == 'oracle'">'%'||#{elementname}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{elementname}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{elementname},'%')</if>
+			</if>
+			<if test="pdfelementname != null and pdfelementname != ''">
+				AND a.pdfelementname LIKE 
+					<if test="dbName == 'oracle'">'%'||#{pdfelementname}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{pdfelementname}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{pdfelementname},'%')</if>
+			</if>
+			<if test="company != null and company.id != null and company.id != ''">
+				AND a.company_id = #{company.id}
+			</if>
+			<if test="office != null and office.id != null and office.id != ''">
+				AND a.office_id = #{office.id}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="SysModelement">
+		SELECT 
+			<include refid="sysModelementColumns"/>
+		FROM sys_modelement a
+		<include refid="sysModelementJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO sys_modelement(
+			id,
+			elementname,
+			pdfelementname,
+			company_id,
+			office_id,
+			use_flag,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{elementname},
+			#{pdfelementname},
+			#{company.id},
+			#{office.id},
+			#{useFlag},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE sys_modelement SET 	
+			elementname = #{elementname},
+			pdfelementname = #{pdfelementname},
+			company_id = #{company.id},
+			office_id = #{office.id},
+			use_flag = #{useFlag},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE sys_modelement SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
