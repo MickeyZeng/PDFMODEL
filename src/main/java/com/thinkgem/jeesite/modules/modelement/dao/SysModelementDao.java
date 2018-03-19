@@ -7,6 +7,8 @@ import com.thinkgem.jeesite.common.persistence.CrudDao;
 import com.thinkgem.jeesite.common.persistence.annotation.MyBatisDao;
 import com.thinkgem.jeesite.modules.modelement.entity.SysModelement;
 
+import java.util.List;
+
 /**
  * 模版元素查看DAO接口
  * @author Mickey_zjq
@@ -14,5 +16,6 @@ import com.thinkgem.jeesite.modules.modelement.entity.SysModelement;
  */
 @MyBatisDao
 public interface SysModelementDao extends CrudDao<SysModelement> {
-	
+
+    public List<SysModelement> findCheckPage(SysModelement sysModelement);
 }

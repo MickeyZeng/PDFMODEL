@@ -5,6 +5,7 @@ package com.thinkgem.jeesite.modules.modelement.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +22,9 @@ import com.thinkgem.jeesite.modules.modelement.dao.SysModelementDao;
 @Service
 @Transactional(readOnly = true)
 public class SysModelementService extends CrudService<SysModelementDao, SysModelement> {
+
+	@Autowired
+	private SysModelementDao sysModelementDao;
 
 	public SysModelement get(String id) {
 		return super.get(id);
@@ -43,5 +47,10 @@ public class SysModelementService extends CrudService<SysModelementDao, SysModel
 	public void delete(SysModelement sysModelement) {
 		super.delete(sysModelement);
 	}
-	
+
+	public Page<SysModelement> findCheckPage(Page<SysModelement> sysModelementPage, SysModelement sysModelement) {
+		sysModelement.setPage(sysModelementPage);
+		sysModelementPage.setList(sysModelementDao.findCheckPage(sysModelement));
+		return sysModelementPage;
+	}
 }

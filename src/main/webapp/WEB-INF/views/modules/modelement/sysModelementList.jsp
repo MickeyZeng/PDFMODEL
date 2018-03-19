@@ -19,7 +19,6 @@
 <body>
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="${ctx}/modelement/sysModelement/">模版元素列表</a></li>
-		<shiro:hasPermission name="modelement:sysModelement:edit"><li><a href="${ctx}/modelement/sysModelement/form">模版元素添加</a></li></shiro:hasPermission>
 	</ul>
 	<form:form id="searchForm" modelAttribute="sysModelement" action="${ctx}/modelement/sysModelement/" method="post" class="breadcrumb form-search">
 		<input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>

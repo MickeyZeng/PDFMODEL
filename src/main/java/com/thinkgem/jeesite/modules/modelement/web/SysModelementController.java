@@ -55,6 +55,14 @@ public class SysModelementController extends BaseController {
 	}
 
 	@RequiresPermissions("modelement:sysModelement:view")
+	@RequestMapping(value = "checkList")
+	public String checkList(SysModelement sysModelement, HttpServletRequest request, HttpServletResponse response, Model model) {
+		Page<SysModelement> page = sysModelementService.findCheckPage(new Page<SysModelement>(request, response), sysModelement);
+		model.addAttribute("page", page);
+		return "modules/modelement/sysModelementCheckList";
+	}
+
+	@RequiresPermissions("modelement:sysModelement:view")
 	@RequestMapping(value = "form")
 	public String form(SysModelement sysModelement, Model model) {
 		model.addAttribute("sysModelement", sysModelement);

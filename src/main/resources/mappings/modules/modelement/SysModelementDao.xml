@@ -57,6 +57,7 @@
 			<if test="office != null and office.id != null and office.id != ''">
 				AND a.office_id = #{office.id}
 			</if>
+				AND a.use_flag = '1'
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
@@ -67,7 +68,44 @@
 			</otherwise>
 		</choose>
 	</select>
-	
+
+	<select id="findCheckPage" resultType="SysModelement">
+		SELECT
+		<include refid="sysModelementColumns"/>
+		FROM sys_modelement a
+		<include refid="sysModelementJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="elementname != null and elementname != ''">
+				AND a.elementname LIKE
+				<if test="dbName == 'oracle'">'%'||#{elementname}||'%'</if>
+				<if test="dbName == 'mssql'">'%'+#{elementname}+'%'</if>
+				<if test="dbName == 'mysql'">concat('%',#{elementname},'%')</if>
+			</if>
+			<if test="pdfelementname != null and pdfelementname != ''">
+				AND a.pdfelementname LIKE
+				<if test="dbName == 'oracle'">'%'||#{pdfelementname}||'%'</if>
+				<if test="dbName == 'mssql'">'%'+#{pdfelementname}+'%'</if>
+				<if test="dbName == 'mysql'">concat('%',#{pdfelementname},'%')</if>
+			</if>
+			<if test="company != null and company.id != null and company.id != ''">
+				AND a.company_id = #{company.id}
+			</if>
+			<if test="office != null and office.id != null and office.id != ''">
+				AND a.office_id = #{office.id}
+			</if>
+			AND a.use_flag = '0'
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+
 	<select id="findAllList" resultType="SysModelement">
 		SELECT 
 			<include refid="sysModelementColumns"/>
