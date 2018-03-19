@@ -69,6 +69,20 @@ public class SysModelementController extends BaseController {
 		return "modules/modelement/sysModelementForm";
 	}
 
+	@RequiresPermissions("modelement:sysModelement:view")
+	@RequestMapping(value = "create")
+	public String create(SysModelement sysModelement, Model model) {
+		model.addAttribute("sysModelement", sysModelement);
+		return "modules/modelement/createElement";
+	}
+
+	@RequiresPermissions("modelement:sysModelement:view")
+	@RequestMapping(value = "checkForm")
+	public String checkForm(SysModelement sysModelement, Model model) {
+		model.addAttribute("sysModelement", sysModelement);
+		return "modules/modelement/sysModelementCheckForm";
+	}
+
 	@RequiresPermissions("modelement:sysModelement:edit")
 	@RequestMapping(value = "save")
 	public String save(SysModelement sysModelement, Model model, RedirectAttributes redirectAttributes) {
@@ -86,6 +100,15 @@ public class SysModelementController extends BaseController {
 		sysModelementService.delete(sysModelement);
 		addMessage(redirectAttributes, "删除模版元素成功");
 		return "redirect:"+Global.getAdminPath()+"/modelement/sysModelement/?repage";
+	}
+
+	@RequiresPermissions("modelement:sysModelement:edit")
+	@RequestMapping(value = "updateCheck")
+	public String updateCheck(SysModelement sysModelement, RedirectAttributes redirectAttributes) throws Exception {
+		sysModelementService.updateCheck(sysModelement);
+		//sysModelementService.sendMail(sysModelement);
+		addMessage(redirectAttributes, "元素成功通过审核。通知邮件已发送。");
+		return "redirect:" + adminPath + "/modelement/sysModelement/checkList?repage";
 	}
 
 }

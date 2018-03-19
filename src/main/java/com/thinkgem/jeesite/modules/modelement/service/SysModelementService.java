@@ -5,6 +5,7 @@ package com.thinkgem.jeesite.modules.modelement.service;
 
 import java.util.List;
 
+import com.thinkgem.jeesite.common.utils.EmailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,5 +53,15 @@ public class SysModelementService extends CrudService<SysModelementDao, SysModel
 		sysModelement.setPage(sysModelementPage);
 		sysModelementPage.setList(sysModelementDao.findCheckPage(sysModelement));
 		return sysModelementPage;
+	}
+
+	@Transactional(readOnly = false)
+	public void updateCheck(SysModelement sysModelement) {
+		sysModelement.setUseFlag("1");
+		sysModelementDao.update(sysModelement);
+	}
+
+	public void sendMail(SysModelement sysModelement) throws Exception {
+		EmailUtils.WriteLetter(sysModelement.getCreateBy().getEmail());
 	}
 }

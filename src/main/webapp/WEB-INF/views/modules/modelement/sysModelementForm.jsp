@@ -27,7 +27,8 @@
 </head>
 <body>
 	<ul class="nav nav-tabs">
-		<li class="active"><a href="${ctx}/modelement/sysModelement/form?id=${sysModelement.id}">模版元素<shiro:hasPermission name="modelement:sysModelement:edit">${not empty sysModelement.id?'修改':'添加'}</shiro:hasPermission><shiro:lacksPermission name="modelement:sysModelement:edit">查看</shiro:lacksPermission></a></li>
+		<li><a href="${ctx}/modelement/sysModelement/">待审核元素列表</a></li>
+		<li class="active"><a href="${ctx}/modelement/sysModelement/form?id=${sysModelement.id}">模版元素查看</a></li>
 	</ul><br/>
 	<form:form id="inputForm" modelAttribute="sysModelement" action="${ctx}/modelement/sysModelement/save" method="post" class="form-horizontal">
 		<form:hidden path="id"/>
@@ -67,10 +68,6 @@
 			<div class="controls">
 				<form:textarea path="remarks" htmlEscape="false" rows="4" maxlength="255" class="input-xxlarge "/>
 			</div>
-		</div>
-		<div>
-			<span class="help-inline"><font color="red">*</font>该元素还没进经过审核，所以暂时无法使用。</span>
-			<input value="0" type="hidden" name="useFlag">
 		</div>
 		<div class="form-actions">
 			<shiro:hasPermission name="modelement:sysModelement:edit"><input id="btnSubmit" class="btn btn-primary" type="submit" value="保 存"/>&nbsp;</shiro:hasPermission>

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mickey
-  Date: 2018/3/11
-  Time: 10:53
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/WEB-INF/views/include/taglib.jsp"%>
 <html>
@@ -14,10 +7,10 @@
 </head>
 <body>
 <ul class="nav nav-tabs">
-    <li><a href="${ctx}/sys/user/checklist">用户列表</a></li>
-    <li class="active"><a href="${ctx}/sys/user/checkForm?id=${user.id}">用户<shiro:hasPermission name="sys:user:edit">${not empty user.id?'修改':'添加'}</shiro:hasPermission><shiro:lacksPermission name="sys:user:edit">查看</shiro:lacksPermission></a></li>
+    <li><a href="${ctx}/sys/user/checklist">待审核用户列表</a></li>
+    <li class="active"><a href="${ctx}/sys/user/checkForm?id=${user.id}">用户审核</a></li>
 </ul><br/>
-<form:form id="inputForm" modelAttribute="user"  method="post" class="form-horizontal">
+<form:form id="inputForm" modelAttribute="user"   method="post" class="form-horizontal">
     <form:hidden path="id"/>
     <sys:message content="${message}"/>
     <div class="control-group">
@@ -118,7 +111,7 @@
     <div class="form-actions">
         <shiro:hasPermission name="sys:user:edit">
             <a href="${ctx}/sys/user/updateCheck?id=${user.id}"><input id="btnSubmit" class="btn btn-primary"  value="通 过"/></a>&nbsp;
-            <a href="${ctx}/sys/user/delete?id=${user.id}" onclick="return confirmx('确认不允许该用户通过吗？', this.href)"><input id="btnDelete" class="btn btn-primary"  value="不通过"/></a>
+            <a href="${ctx}/sys/user/delete?id=${user.id}" onclick="return confirmx('确认不允许该用户通过吗？', this.href)"><input id="btnDelete" class="btn btn-primary"  value="不 通 过"/></a>
         </shiro:hasPermission>
         <input id="btnCancel" class="btn" type="button" value="返 回" onclick="history.go(-1)"/>
     </div>

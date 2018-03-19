@@ -47,7 +47,6 @@
 				<th>元素PDF里的名字</th>
 				<th>归属公司</th>
 				<th>归属部门</th>
-				<th>创建者</th>
 				<shiro:hasPermission name="modelement:sysModelement:edit"><th>操作</th></shiro:hasPermission>
 			</tr>
 		</thead>
@@ -65,9 +64,6 @@
 				</td>
 				<td>
 					${sysModelement.office.name}
-				</td>
-				<td>
-					${sysModelement.createBy.id}
 				</td>
 				<shiro:hasPermission name="modelement:sysModelement:edit"><td>
     				<a href="${ctx}/modelement/sysModelement/form?id=${sysModelement.id}">修改</a>

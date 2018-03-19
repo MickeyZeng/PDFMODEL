@@ -19,7 +19,7 @@
 </head>
 <body>
 <ul class="nav nav-tabs">
-    <li class="active"><a href="${ctx}/modelement/sysModelement/">未审核元素列表</a></li>
+    <li class="active"><a href="${ctx}/modelement/sysModelement/checkList">未审核元素列表</a></li>
 </ul>
 <form:form id="searchForm" modelAttribute="sysModelement" action="${ctx}/modelement/sysModelement/checkList" method="post" class="breadcrumb form-search">
     <input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>
@@ -48,14 +48,13 @@
         <th>元素PDF里的名字</th>
         <th>归属公司</th>
         <th>归属部门</th>
-        <th>创建者</th>
         <shiro:hasPermission name="modelement:sysModelement:edit"><th>操作</th></shiro:hasPermission>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${page.list}" var="sysModelement">
         <tr>
-            <td><a href="${ctx}/modelement/sysModelement/form?id=${sysModelement.id}">
+            <td><a href="${ctx}/modelement/sysModelement/checkForm?id=${sysModelement.id}">
                     ${sysModelement.elementname}
             </a></td>
             <td>
@@ -67,11 +66,8 @@
             <td>
                     ${sysModelement.office.name}
             </td>
-            <td>
-                    ${sysModelement.createBy.id}
-            </td>
             <shiro:hasPermission name="modelement:sysModelement:edit"><td>
-                <a href="${ctx}/modelement/sysModelement/form?id=${sysModelement.id}">修改</a>
+                <a href="${ctx}/modelement/sysModelement/updateCheck?id=${sysModelement.id}">通过</a>
                 <a href="${ctx}/modelement/sysModelement/delete?id=${sysModelement.id}" onclick="return confirmx('确认要删除该模版元素吗？', this.href)">删除</a>
             </td></shiro:hasPermission>
         </tr>
