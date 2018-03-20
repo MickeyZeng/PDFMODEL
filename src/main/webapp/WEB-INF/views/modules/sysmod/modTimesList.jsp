@@ -36,7 +36,6 @@
 	<table id="contentTable" class="table table-striped table-bordered table-condensed">
 		<thead>
 			<tr>
-				<th>编号</th>
 				<th>归属公司</th>
 				<th>次数</th>
 				<th>更新时间</th>
@@ -46,9 +45,6 @@
 		<tbody>
 		<c:forEach items="${page.list}" var="modTimes">
 			<tr>
-				<td>
-					${modTimes.id}
-				</td>
 				<td>
 					${modTimes.company.name}
 				</td>

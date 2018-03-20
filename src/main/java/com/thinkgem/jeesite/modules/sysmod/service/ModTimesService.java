@@ -5,6 +5,7 @@ package com.thinkgem.jeesite.modules.sysmod.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +23,9 @@ import com.thinkgem.jeesite.modules.sysmod.dao.ModTimesDao;
 @Transactional(readOnly = true)
 public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 
+	@Autowired
+	private ModTimesDao modTimesDao;
+
 	public ModTimes get(String id) {
 		return super.get(id);
 	}
@@ -36,6 +40,7 @@ public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 	
 	@Transactional(readOnly = false)
 	public void save(ModTimes modTimes) {
+		//modTimes.setIsNewRecord(false);
 		super.save(modTimes);
 	}
 	
@@ -43,5 +48,19 @@ public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 	public void delete(ModTimes modTimes) {
 		super.delete(modTimes);
 	}
-	
+
+	@Transactional(readOnly = false)
+	public void updateTimes(ModTimes modTimes) {
+		ModTimes times = modTimesDao.getByComId(modTimes);
+		int i = Integer.parseInt(times.getTimes());
+		int j = Integer.parseInt(modTimes.getTimes());
+		modTimes.setTimes(Integer.toString(i+j));
+		modTimes.setId(times.getId());
+		modTimes.preUpdate();
+		modTimesDao.update(modTimes);
+	}
+
+	public ModTimes getByUser(String id) {
+		return modTimesDao.getByUser(id);
+	}
 }

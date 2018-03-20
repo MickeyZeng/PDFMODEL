@@ -14,5 +14,17 @@ import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
  */
 @MyBatisDao
 public interface ModTimesDao extends CrudDao<ModTimes> {
-	
+
+
+    /**
+     * 根据公司的id查找相关的数据
+     */
+     public ModTimes getByComId(ModTimes modTimes);
+
+    /**
+     * 根据当前用户的公司id获取该公司的数据
+     * @param id
+     * @return
+     */
+    ModTimes getByUser(String id);
 }

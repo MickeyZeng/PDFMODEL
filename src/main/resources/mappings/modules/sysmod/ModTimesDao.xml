@@ -68,7 +68,15 @@
 			</otherwise>
 		</choose>
 	</select>
-	
+
+	<select id="getByUser" resultType="ModTimes" parameterType="String">
+		SELECT
+			<include refid="modTimesColumns"></include>
+		FROM mod_times a
+			<include refid="modTimesJoins"></include>
+		WHERE a.company_id = #{id}
+	</select>
+
 	<insert id="insert">
 		INSERT INTO mod_times(
 			id,
@@ -111,5 +119,13 @@
 			del_flag = #{DEL_FLAG_DELETE}
 		WHERE id = #{id}
 	</update>
+
+	<select id="getByComId" resultType="ModTimes" parameterType="ModTimes">
+		SELECT
+		<include refid="modTimesColumns"></include>
+		FROM mod_times a
+		<include refid="modTimesJoins"></include>
+		WHERE a.company_id = #{company.id} AND a.del_flag = #{DEL_FLAG_NORMAL}
+	</select>
 	
 </mapper>

@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.modules.sysmod.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,8 +58,15 @@ public class ModTimesController extends BaseController {
 	@RequiresPermissions("sysmod:modTimes:view")
 	@RequestMapping(value = "form")
 	public String form(ModTimes modTimes, Model model) {
-		model.addAttribute("modTimes", modTimes);
-		return "modules/sysmod/modTimesForm";
+		String flag = UserUtils.getUser().getUserType();
+		if(!(flag.equals("1"))){
+			ModTimes modTimes1 = modTimesService.getByUser(UserUtils.getUser().getCompany().getId());
+			model.addAttribute("modTimes", modTimes1);
+			return "modules/sysmod/modTimesForm";
+		}else {
+			model.addAttribute("modTimes", modTimes);
+			return "modules/sysmod/modTimesType";
+		}
 	}
 
 	@RequiresPermissions("sysmod:modTimes:edit")
@@ -80,4 +88,11 @@ public class ModTimesController extends BaseController {
 		return "redirect:"+Global.getAdminPath()+"/sysmod/modTimes/?repage";
 	}
 
+	@RequiresPermissions("sysmod:modTimes:edit")
+	@RequestMapping(value = "updateTimes")
+	public String updateTimes(ModTimes modTimes, RedirectAttributes redirectAttributes,Model model){
+		modTimesService.updateTimes(modTimes);
+		addMessage(redirectAttributes, "申请模版次数增加成功");
+		return "redirect:" + Global.getAdminPath() + "/sysmod/modTimes/?repage";
+	}
 }
