@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
+import com.thinkgem.jeesite.modules.sysmod.service.ModTimesService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,6 +42,9 @@ public class OfficeController extends BaseController {
 
 	@Autowired
 	private OfficeService officeService;
+
+	@Autowired
+	private ModTimesService modTimesService;
 	
 	@ModelAttribute("office")
 	public Office get(@RequestParam(required=false) String id) {
@@ -62,6 +67,13 @@ public class OfficeController extends BaseController {
 	public String list(Office office, Model model) {
         model.addAttribute("list", officeService.findList(office));
 		return "modules/sys/officeList";
+	}
+
+	@RequiresPermissions("sys:office:view")
+	@RequestMapping(value = {"allList"})
+	public String allList(Office office, Model model) {
+		model.addAttribute("list", officeService.findAll());
+		return "modules/sys/officeAllList";
 	}
 	
 	@RequiresPermissions("sys:office:view")
@@ -95,6 +107,7 @@ public class OfficeController extends BaseController {
 	@RequiresPermissions("sys:office:edit")
 	@RequestMapping(value = "save")
 	public String save(Office office, Model model, RedirectAttributes redirectAttributes) {
+		ModTimes modTimes = new ModTimes();
 		if(Global.isDemoMode()){
 			addMessage(redirectAttributes, "演示模式，不允许操作！");
 			return "redirect:" + adminPath + "/sys/office/";
@@ -102,7 +115,15 @@ public class OfficeController extends BaseController {
 		if (!beanValidator(model, office)){
 			return form(office, model);
 		}
-		officeService.save(office);
+		if(office.getType().equals("1") && office.getGrade().equals("2") && office.getIsNewRecord()) {
+			officeService.save(office);
+			modTimes.setCompany(office);
+			modTimes.setUser(office.getPrimaryPerson());
+			modTimes.setTimes("2");
+			modTimesService.save(modTimes);
+		}else{
+			officeService.save(office);
+		}
 		
 		if(office.getChildDeptList()!=null){
 			Office childOffice = null;
@@ -120,7 +141,8 @@ public class OfficeController extends BaseController {
 		
 		addMessage(redirectAttributes, "保存机构'" + office.getName() + "'成功");
 		String id = "0".equals(office.getParentId()) ? "" : office.getParentId();
-		return "redirect:" + adminPath + "/sys/office/list?id="+id+"&parentIds="+office.getParentIds();
+		//return "redirect:" + adminPath + "/sys/office/list?id="+id+"&parentIds="+office.getParentIds();
+		return "redirect:" + adminPath + "/sys/office/allList";
 	}
 	
 	@RequiresPermissions("sys:office:edit")
