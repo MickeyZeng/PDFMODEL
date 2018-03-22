@@ -90,8 +90,8 @@ public class SysModelementController extends BaseController {
 			return form(sysModelement, model);
 		}
 		sysModelementService.save(sysModelement);
-		addMessage(redirectAttributes, "保存模版元素成功");
-		return "redirect:"+Global.getAdminPath()+"/modelement/sysModelement/?repage";
+		addMessage(redirectAttributes, "申请模版元素成功");
+		return "redirect:"+Global.getAdminPath()+"/modelement/sysModelement/create?repage";
 	}
 	
 	@RequiresPermissions("modelement:sysModelement:edit")
