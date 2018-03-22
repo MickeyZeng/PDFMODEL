@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: mickey
+  Date: 2018/3/22
+  Time: 14:13
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/WEB-INF/views/include/taglib.jsp"%>
 <html>
@@ -50,7 +57,7 @@
         <label class="control-label">归属公司:</label>
         <div class="controls">
             <sys:treeselect id="company" name="company.id" value="${sysModelement.company.id}" labelName="company.name" labelValue="${sysModelement.company.name}"
-                            title="部门" url="/sys/office/treeData?type=1" cssClass="required" allowClear="true" notAllowSelectParent="true"/>
+                            title="部门" url="/sys/office/treeData?type=1" cssClass="required" allowClear="true" notAllowSelectParent="true" disabled="disabled" />
             <span class="help-inline"><font color="red">*</font> </span>
         </div>
     </div>
@@ -58,7 +65,7 @@
         <label class="control-label">归属部门:</label>
         <div class="controls">
             <sys:treeselect id="office" name="office.id" value="${sysModelement.office.id}" labelName="office.name" labelValue="${sysModelement.office.name}"
-                            title="部门" url="/sys/office/treeData?type=2" cssClass="required" allowClear="true" notAllowSelectParent="true"/>
+                            title="部门" url="/sys/office/treeData?type=2" cssClass="required" allowClear="true" notAllowSelectParent="true" disabled="disabled" />
             <span class="help-inline"><font color="red">*</font> </span>
         </div>
     </div>

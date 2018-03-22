@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.modules.modelement.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -72,8 +73,17 @@ public class SysModelementController extends BaseController {
 	@RequiresPermissions("modelement:sysModelement:view")
 	@RequestMapping(value = "create")
 	public String create(SysModelement sysModelement, Model model) {
-		model.addAttribute("sysModelement", sysModelement);
-		return "modules/modelement/createElement";
+
+		if(!(UserUtils.getUser().getUserType().equals("1"))){
+			sysModelement.setCompany(UserUtils.getUser().getCompany());
+			sysModelement.setOffice(UserUtils.getUser().getOffice());
+			model.addAttribute("sysModelement", sysModelement);
+			return "modules/modelement/createElementType";
+		}else {
+			model.addAttribute("sysModelement", sysModelement);
+			return "modules/modelement/createElement";
+		}
+
 	}
 
 	@RequiresPermissions("modelement:sysModelement:view")
@@ -89,9 +99,15 @@ public class SysModelementController extends BaseController {
 		if (!beanValidator(model, sysModelement)){
 			return form(sysModelement, model);
 		}
+		Boolean flag = sysModelement.getIsNewRecord();
 		sysModelementService.save(sysModelement);
-		addMessage(redirectAttributes, "申请模版元素成功");
-		return "redirect:"+Global.getAdminPath()+"/modelement/sysModelement/create?repage";
+		if(flag) {
+			addMessage(redirectAttributes, "申请模版元素成功");
+			return "redirect:" + Global.getAdminPath() + "/modelement/sysModelement/create?repage";
+		}else{
+			addMessage(redirectAttributes, "保存模版元素成功");
+			return "redirect:" + Global.getAdminPath() + "/modelement/sysModelement/?repage";
+		}
 	}
 	
 	@RequiresPermissions("modelement:sysModelement:edit")

@@ -64,4 +64,8 @@ public class SysModelementService extends CrudService<SysModelementDao, SysModel
 	public void sendMail(SysModelement sysModelement) throws Exception {
 		EmailUtils.WriteLetter(sysModelement.getCreateBy().getEmail());
 	}
+
+	public SysModelement getByUser(String id) {
+		return sysModelementDao.getByUser(id);
+	}
 }

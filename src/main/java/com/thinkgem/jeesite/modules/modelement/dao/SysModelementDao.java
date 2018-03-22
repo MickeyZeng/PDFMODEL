@@ -18,4 +18,6 @@ import java.util.List;
 public interface SysModelementDao extends CrudDao<SysModelement> {
 
     public List<SysModelement> findCheckPage(SysModelement sysModelement);
+
+    SysModelement getByUser(String id);
 }
