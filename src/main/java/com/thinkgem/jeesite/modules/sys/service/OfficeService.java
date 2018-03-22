@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.modules.sys.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.thinkgem.jeesite.common.utils.EmailUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -60,4 +61,8 @@ public class OfficeService extends TreeService<OfficeDao, Office> {
 		List<Office> officeList = UserUtils.getOfficeAllList();
 		return officeList;
 	}
+
+    public void sendMail(Office office) throws Exception {
+		EmailUtils.WriteLetter(office.getEmail(),"3");
+    }
 }

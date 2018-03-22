@@ -107,6 +107,9 @@ public class EmailUtils {
         }else if(loginFlag.equals("1")){
             message.setSubject("关于新建用户成功通过审核通知", "UTF-8");
             message.setContent("亲爱的用户，<br>  由于你的申请通过了管理员的审核，你的用户已经能登录我们公司的系统了。<br>  谢谢你对我公司的支持。", "text/html;charset=UTF-8");
+        }else if(loginFlag.equals("3")){
+            message.setSubject("关于该公司已成功创建通知","UTF-8");
+            message.setContent("亲爱的用户，<br>我PDF总公司已经成功为贵公司创建账号，欢迎使用我们系统。<br>谢谢您对我公司的支持。", "text/html;charset=UTF-8");
         }
 
         // 6. 设置发件时间

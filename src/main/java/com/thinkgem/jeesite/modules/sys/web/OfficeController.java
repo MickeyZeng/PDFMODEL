@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.thinkgem.jeesite.modules.sys.service.SystemService;
 import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
 import com.thinkgem.jeesite.modules.sysmod.service.ModTimesService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -45,6 +46,7 @@ public class OfficeController extends BaseController {
 
 	@Autowired
 	private ModTimesService modTimesService;
+
 	
 	@ModelAttribute("office")
 	public Office get(@RequestParam(required=false) String id) {
@@ -106,7 +108,7 @@ public class OfficeController extends BaseController {
 	
 	@RequiresPermissions("sys:office:edit")
 	@RequestMapping(value = "save")
-	public String save(Office office, Model model, RedirectAttributes redirectAttributes) {
+	public String save(Office office, Model model, RedirectAttributes redirectAttributes) throws Exception {
 		ModTimes modTimes = new ModTimes();
 		if(Global.isDemoMode()){
 			addMessage(redirectAttributes, "演示模式，不允许操作！");
@@ -121,6 +123,7 @@ public class OfficeController extends BaseController {
 			modTimes.setUser(office.getPrimaryPerson());
 			modTimes.setTimes("2");
 			modTimesService.save(modTimes);
+			officeService.sendMail(office);
 		}else{
 			officeService.save(office);
 		}
