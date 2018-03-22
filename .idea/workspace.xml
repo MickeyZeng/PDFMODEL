@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,58 +22,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CKFinderUpload.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CKFinderUpload.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="54" lean-forward="false" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+            <state relative-caret-position="388">
+              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1521707034842" expanded="true" signature="1777:1794" ph="..." />
+                <marker date="1521708880197" expanded="true" signature="1777:1794" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userForm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="taglib.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="standalone.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/_samples/standalone.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1520561438050" expanded="true" signature="2046:2063" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +58,8 @@
       <file leaf-file-name="ckfinder.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="26" />
+            <state relative-caret-position="348">
+              <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,6 +86,7 @@
       <find>create</find>
       <find>getByUser</find>
       <find>footer</find>
+      <find>showFileInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,6 +125,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/modelement/createElementType.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp" />
       </list>
     </option>
@@ -318,6 +289,17 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="sys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -520,7 +502,7 @@
       <option name="presentableId" value="Default" />
       <updated>1521616163802</updated>
       <workItem from="1521616167304" duration="3177000" />
-      <workItem from="1521620680190" duration="19162000" />
+      <workItem from="1521620680190" duration="20166000" />
     </task>
     <task id="LOCAL-00001" summary="注意系统的缓存问题 新添加了新建行政机构的功能而且同时模版次数表会相对应增加">
       <created>1521624475890</created>
@@ -564,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521699428089</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="成功接入PDF上传功能页面，还需要修改。">
+      <created>1521708110340</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1521708110340</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22339000" />
+    <option name="totallyTimeSpent" value="23343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -699,18 +688,11 @@
     <MESSAGE value="完善了新建机构的功能，新建公司后会有邮件进行通知。" />
     <MESSAGE value="改正新建模版元素功能页面的错误。" />
     <MESSAGE value="创建元素功能中，完成了对归属公司和归属机构的限定。" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建元素功能中，完成了对归属公司和归属机构的限定。" />
+    <MESSAGE value="成功接入PDF上传功能页面，还需要修改。" />
+    <option name="LAST_COMMIT_MESSAGE" value="成功接入PDF上传功能页面，还需要修改。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
@@ -1059,14 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/ckfinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1133,17 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/_samples/standalone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1520561438050" expanded="true" signature="2046:2063" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1152,13 +1115,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/_samples/standalone.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="54" lean-forward="false" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <state relative-caret-position="240">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1521707034842" expanded="true" signature="1777:1794" ph="..." />
+            <marker date="1520561438050" expanded="true" signature="2046:2063" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1168,6 +1131,25 @@
         <state relative-caret-position="45">
           <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1521708880197" expanded="true" signature="1777:1794" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
