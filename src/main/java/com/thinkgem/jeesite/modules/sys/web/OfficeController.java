@@ -148,6 +148,7 @@ public class OfficeController extends BaseController {
 	@RequiresPermissions("sys:office:edit")
 	@RequestMapping(value = "delete")
 	public String delete(Office office, RedirectAttributes redirectAttributes) {
+		ModTimes modTimes = new ModTimes();
 		if(Global.isDemoMode()){
 			addMessage(redirectAttributes, "演示模式，不允许操作！");
 			return "redirect:" + adminPath + "/sys/office/list";
@@ -155,6 +156,7 @@ public class OfficeController extends BaseController {
 //		if (Office.isRoot(id)){
 //			addMessage(redirectAttributes, "删除机构失败, 不允许删除顶级机构或编号空");
 //		}else{
+			modTimesService.deleteByComId(office);
 			officeService.delete(office);
 			addMessage(redirectAttributes, "删除机构成功");
 //		}

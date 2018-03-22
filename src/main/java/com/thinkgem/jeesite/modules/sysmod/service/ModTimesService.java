@@ -5,6 +5,8 @@ package com.thinkgem.jeesite.modules.sysmod.service;
 
 import java.util.List;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.thinkgem.jeesite.modules.sys.entity.Office;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -62,5 +64,15 @@ public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 
 	public ModTimes getByUser(String id) {
 		return modTimesDao.getByUser(id);
+	}
+
+	@Transactional(readOnly = false)
+	public void deleteByComId(Office office) {
+		ModTimes modTimes = new ModTimes();
+		modTimes.setCompany(office);
+		List<ModTimes> modTimesList = modTimesDao.findList(modTimes);
+		for (int i = 0 ; i < modTimesList.size() ; i++) {
+			modTimesDao.delete(modTimesList.get(i));
+		}
 	}
 }

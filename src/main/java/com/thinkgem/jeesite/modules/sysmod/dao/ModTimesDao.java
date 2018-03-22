@@ -27,4 +27,5 @@ public interface ModTimesDao extends CrudDao<ModTimes> {
      * @return
      */
     ModTimes getByUser(String id);
+
 }
