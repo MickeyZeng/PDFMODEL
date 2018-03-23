@@ -5,7 +5,6 @@ package com.thinkgem.jeesite.modules.sysmod.service;
 
 import java.util.List;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import com.thinkgem.jeesite.modules.sys.entity.Office;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

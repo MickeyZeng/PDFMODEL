@@ -117,6 +117,9 @@ public class OfficeController extends BaseController {
 		if (!beanValidator(model, office)){
 			return form(office, model);
 		}
+//		if(office.getIsNewRecord()){
+//			officeService.createFile(office.getName());
+//		}
 		if(office.getType().equals("1") && office.getGrade().equals("2") && office.getIsNewRecord()) {
 			officeService.save(office);
 			modTimes.setCompany(office);

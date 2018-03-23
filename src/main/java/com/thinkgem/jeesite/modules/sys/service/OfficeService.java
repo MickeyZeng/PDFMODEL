@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.thinkgem.jeesite.common.utils.EmailUtils;
+import com.thinkgem.jeesite.common.utils.FileUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -64,5 +65,9 @@ public class OfficeService extends TreeService<OfficeDao, Office> {
 
     public void sendMail(Office office) throws Exception {
 		EmailUtils.WriteLetter(office.getEmail(),"3");
+    }
+
+    public void createFile(String name) {
+		FileUtils.createFile("/Users/mickey/document/PDFModel1" + name);
     }
 }

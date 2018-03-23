@@ -45,6 +45,15 @@
 			<allowedExtensions>swf,flv</allowedExtensions>
 			<deniedExtensions></deniedExtensions>
 		</type>
+		<type>
+			<type name="PDF">
+				<url>%BASE_URL%PDF</url>
+				<directory>%BASE_DIR%PDF</directory>
+				<maxSize>5M</maxSize>
+				<allowedExtensions>pdf</allowedExtensions>
+				<deniedExtensions></deniedExtensions>
+			</type>
+		</type>
 	</types>
 	<accessControls>
 		<accessControl>
