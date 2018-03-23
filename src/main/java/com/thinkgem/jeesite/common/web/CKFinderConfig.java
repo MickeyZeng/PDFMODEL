@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.common.web;
 import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServletRequest;
 
+import com.sun.xml.internal.rngom.parse.compact.UCode_UCodeESC_CharStream;
 import com.thinkgem.jeesite.common.config.Global;
 import com.thinkgem.jeesite.common.utils.FileUtils;
 import com.thinkgem.jeesite.modules.sys.security.SystemAuthorizingRealm.Principal;
@@ -29,6 +30,8 @@ public class CKFinderConfig extends Configuration {
 	@Override
     protected Configuration createConfigurationInstance() {
 		Principal principal = (Principal) UserUtils.getPrincipal();
+		String comName = UserUtils.getUser().getCompany().getName();
+		String officeName = UserUtils.getUser().getOffice().getName();
 		if (principal == null){
 			return new CKFinderConfig(this.servletConf);
 		}

@@ -56,8 +56,15 @@
         finder.width = 950;
         // This is a sample function which is called when a file is selected in CKFinder.
         finder.selectActionFunction = showFileInfo;
-        finder.resourceType = "PDF";
+        //get the parameter and decide the file path
+//        finder.startupPath = "PDF:/中山大学珠海分校/计算机学院/";
+//        finder.callback = function(api){
+//            api.open('Images','/');
+//        }
+        //finder.resourceType = "PDF:"+ ${comName} +"/"+ ${officeName};
+        finder.resourceType = "PDF"
         finder.create();
+
 
         // It can also be done in a single line, calling the "static"
         // create( basePath, width, height, selectActionFunction ) function:

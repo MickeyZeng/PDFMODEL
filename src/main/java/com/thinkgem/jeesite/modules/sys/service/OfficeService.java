@@ -67,7 +67,4 @@ public class OfficeService extends TreeService<OfficeDao, Office> {
 		EmailUtils.WriteLetter(office.getEmail(),"3");
     }
 
-    public void createFile(String name) {
-		FileUtils.createDirectory("/Users/mickey/document/PDFModel/1/PDF/" + name);
-    }
 }
