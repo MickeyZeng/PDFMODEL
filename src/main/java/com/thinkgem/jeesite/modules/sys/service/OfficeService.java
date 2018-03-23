@@ -68,6 +68,6 @@ public class OfficeService extends TreeService<OfficeDao, Office> {
     }
 
     public void createFile(String name) {
-		FileUtils.createFile("/Users/mickey/document/PDFModel1" + name);
+		FileUtils.createDirectory("/Users/mickey/document/PDFModel/1/PDF/" + name);
     }
 }

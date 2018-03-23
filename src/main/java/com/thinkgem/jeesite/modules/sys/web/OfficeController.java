@@ -117,9 +117,13 @@ public class OfficeController extends BaseController {
 		if (!beanValidator(model, office)){
 			return form(office, model);
 		}
-//		if(office.getIsNewRecord()){
-//			officeService.createFile(office.getName());
-//		}
+
+		//According to the type and grade and wheather it is new record or not to create a file named by his office name
+		if (office.getType().equals("2") && office.getGrade().equals("3") && office.getIsNewRecord()){
+			officeService.createFile(office.getParent().getName()+"/"+office.getName());
+		}
+
+		//create file named by office name and send an email and save that data in the same time
 		if(office.getType().equals("1") && office.getGrade().equals("2") && office.getIsNewRecord()) {
 			officeService.save(office);
 			modTimes.setCompany(office);
@@ -127,6 +131,7 @@ public class OfficeController extends BaseController {
 			modTimes.setTimes("2");
 			modTimesService.save(modTimes);
 			officeService.sendMail(office);
+			officeService.createFile(office.getName());
 		}else{
 			officeService.save(office);
 		}

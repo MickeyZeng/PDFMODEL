@@ -53,8 +53,8 @@ public class CKFinderConfig extends Configuration {
 		try {
 //			Principal principal = (Principal)SecurityUtils.getSubject().getPrincipal();
 //			this.baseURL = ServletContextFactory.getServletContext().getContextPath()+"/userfiles/"+principal+"/";
-			this.baseURL = FileUtils.path("/Users/mickey/document/PDFModel" + principal + "/");
-			this.baseDir = FileUtils.path("/Users/mickey/document/PDFModel" + principal + "/");
+			this.baseURL = FileUtils.path("/Users/mickey/document/PDFModel/" + principal + "/");
+			this.baseDir = FileUtils.path("/Users/mickey/document/PDFModel/" + principal + "/");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
