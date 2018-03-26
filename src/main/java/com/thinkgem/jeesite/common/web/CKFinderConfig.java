@@ -28,8 +28,8 @@ public class CKFinderConfig extends Configuration {
 	@Override
     protected Configuration createConfigurationInstance() {
 		Principal principal = (Principal) UserUtils.getPrincipal();
-//		String comName = UserUtils.getUser().getCompany().getName();
-//		String officeName = UserUtils.getUser().getOffice().getName();
+		String comName = UserUtils.getUser().getCompany().getName();
+		String officeName = UserUtils.getUser().getOffice().getName();
 		if (principal == null){
 			return new CKFinderConfig(this.servletConf);
 		}
@@ -54,8 +54,19 @@ public class CKFinderConfig extends Configuration {
 		try {
 //			Principal principal = (Principal)SecurityUtils.getSubject().getPrincipal();
 //			this.baseURL = ServletContextFactory.getServletContext().getContextPath()+"/userfiles/"+principal+"/";
-			this.baseURL = FileUtils.path("/Users/mickey/document/PDFModel/CKFile/" + principal + "/");
-			this.baseDir = FileUtils.path("/Users/mickey/document/PDFModel/CKFile/" + principal + "/");
+//			this.baseURL = FileUtils.path("/Users/mickey/document/PDFModel/CKFile/" + principal + "/");
+//			this.baseDir = FileUtils.path("/Users/mickey/document/PDFModel/CKFile/" + principal + "/");
+			if(UserUtils.getUser().getUserType().equals("1")){
+				this.baseDir=FileUtils.path("/Users/mickey/document/PDFModel/CKFile/1/");
+				this.baseURL=FileUtils.path("/Users/mickey/document/PDFModel/CKFile/1/");
+			}else if(UserUtils.getUser().getUserType().equals("2")){
+				this.baseDir=FileUtils.path("/Users/mickey/document/PDFModel/CKFile/1/Group/"+comName+"/");
+				this.baseURL=FileUtils.path("/Users/mickey/document/PDFModel/CKFile/1/Group/"+comName+"/");
+			}else if(UserUtils.getUser().getUserType().equals("3")){
+				this.baseDir=FileUtils.path("/Users/mickey/document/PDFModel/CKFile/1/Group/"+comName+"/Group/"+officeName+"/");
+				this.baseURL=FileUtils.path("/Users/mickey/document/PDFModel/CKFile/1/Group/"+comName+"/Group/"+officeName+"/");
+			}
+
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
