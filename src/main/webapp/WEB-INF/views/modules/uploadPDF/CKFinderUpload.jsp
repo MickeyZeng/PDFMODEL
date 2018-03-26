@@ -62,7 +62,7 @@
 //            api.open('Images','/');
 //        }
         //finder.resourceType = "PDF:"+ ${comName} +"/"+ ${officeName};
-        finder.resourceType = "PDF"
+        finder.resourceType = "PDF";
         finder.create();
 
 
