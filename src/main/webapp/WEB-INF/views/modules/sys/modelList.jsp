@@ -15,8 +15,13 @@
     <meta name="robots" content="noindex, nofollow" />
     <link href="${ctxStatic}/ckfinder/_samples/sample.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="${ctxStatic}/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/ckfinder/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/ckfinder/jquery-v1-ui.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/ckfinder/jquery.media.js"></script>
+
 </head>
 <body>
+<div id="pdf_viewer"></div>
 <p style="padding-left: 30px; padding-right: 30px;">
     <script type="text/javascript">
 
@@ -44,6 +49,26 @@
             }
             // this = CKFinderAPI object
             this.openMsgDialog( "Selected file", msg );
+        }
+
+        function closeWindow() {
+            document.getElementById('pdf_viewer').innerHTML = "";
+        }
+
+        function showFile(fileUrl, data) {
+            var sFileName = this.getSelectedFile().name;
+            //alert(fileUrl);
+            var url = "/file" + fileUrl.substring(38);
+            document.getElementById('pdf_viewer').innerHTML =
+                '<span class="close cursor" onclick="closeWindow()">' + '&times;' +
+                '</span>' +
+                '<a class="media" href="' + url + '">' +
+                '</a>' + '<div class="caption">' +
+                '<a href="' + data["fileUrl"] + '" target="_blank">' + sFileName + '</a> (' + data["fileSize"] + 'KB)' +
+                '</div>';
+
+            $('a.media').media({width: 800, height: 600});
+            return true;
         }
 
         // You can use the "CKFinder" class to render CKFinder in a page:
