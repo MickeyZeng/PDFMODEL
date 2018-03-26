@@ -78,8 +78,9 @@
         // The default height is 400.
         finder.height = 700;
         finder.width = 950;
+        finder.readOnly = true;
         // This is a sample function which is called when a file is selected in CKFinder.
-        finder.selectActionFunction = showFileInfo;
+        finder.selectActionFunction = showFile;
         //get the parameter and decide the file path
         //        finder.startupPath = "PDF:/中山大学珠海分校/计算机学院/";
         //        finder.callback = function(api){
