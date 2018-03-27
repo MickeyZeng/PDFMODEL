@@ -4,6 +4,10 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.AcroFields;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import java.io.*;
 import java.util.Map;
@@ -11,9 +15,14 @@ import java.util.Set;
 
 public class PDFTest {
 
-
-
     public static void main(String args[]) throws IOException, DocumentException {
+
+        //开始创建excel
+        HSSFWorkbook workbook = new HSSFWorkbook();
+        HSSFSheet sheet = workbook.createSheet("FormOne");
+        HSSFRow row = sheet.createRow(0);
+        int i = 0;
+
         String filename = "/Users/mickey/document/PDFModel/PDFTest/yyzz_a4_copy.pdf";
         String filename1 = "/Users/mickey/document/PDFModel/PDFTest/Test.pdf";
         FileOutputStream out= null;
@@ -27,8 +36,22 @@ public class PDFTest {
         Set<String> keySet = acroFieldMap.keySet();
         Object[] keySetStr = keySet.toArray();
         for (Object s1 : keySetStr) {
+            HSSFCell cell = row.createCell(i);
+
             System.out.println(s1.toString());
+            cell.setCellValue(s1.toString().substring(2));
+            ++i;
         }
+
+        try {
+            FileOutputStream fos = new FileOutputStream("/Users/mickey/document/PDFModel/ExcelTest/Test.xls");
+            workbook.write(fos);
+            System.out.println("写入成功");
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         pdfStamper.close();
         out.close();
     }
