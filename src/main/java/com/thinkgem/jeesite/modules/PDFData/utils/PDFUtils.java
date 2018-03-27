@@ -1,4 +1,4 @@
-package com.thinkgem.jeesite.test;
+package com.thinkgem.jeesite.modules.PDFData.utils;
 
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.AcroFields;
@@ -13,17 +13,16 @@ import java.io.*;
 import java.util.Map;
 import java.util.Set;
 
-public class PDFTest {
 
-    public static void main(String args[]) throws IOException, DocumentException {
+public class PDFUtils {
+    public static void findID(String filename) throws IOException, DocumentException {
 
         //开始创建excel
         HSSFWorkbook workbook = new HSSFWorkbook();
         HSSFSheet sheet = workbook.createSheet("FormOne");
         HSSFRow row = sheet.createRow(0);
-        int i = 0;
 
-        String filename = "/Users/mickey/document/PDFModel/PDFTest/yyzz_a4_copy.pdf";
+        int i = 0 ;
         String filename1 = "/Users/mickey/document/PDFModel/PDFTest/Test.pdf";
         FileOutputStream out= null;
         PdfReader reader=null;
@@ -41,7 +40,6 @@ public class PDFTest {
             cell.setCellValue(s1.toString().substring(2));
             ++i;
         }
-
         try {
             FileOutputStream fos = new FileOutputStream("/Users/mickey/document/PDFModel/ExcelTest/Test.xls");
             workbook.write(fos);
