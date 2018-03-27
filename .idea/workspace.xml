@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/PDFTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/PDFTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -180,6 +180,11 @@
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
               <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -554,7 +559,7 @@
       <workItem from="1522024632600" duration="15630000" />
       <workItem from="1522111522831" duration="3317000" />
       <workItem from="1522122399607" duration="298000" />
-      <workItem from="1522122975903" duration="10221000" />
+      <workItem from="1522122975903" duration="10428000" />
     </task>
     <task id="LOCAL-00001" summary="注意系统的缓存问题 新添加了新建行政机构的功能而且同时模版次数表会相对应增加">
       <created>1521624475890</created>
@@ -682,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522137426052</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="系统可以生成相关插入数据的模版，路径问题还需要解决，系统问题需要解决(Mac和Window)">
+      <created>1522144301921</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1522144301921</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73577000" />
+    <option name="totallyTimeSpent" value="73784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -793,7 +805,8 @@
     <MESSAGE value="日更新。" />
     <MESSAGE value="增加测试类可以获得PDF里面的表单域里面的ID，是后面的注入功能的基础" />
     <MESSAGE value="测试函数可以生成相关的Excel函数。" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试函数可以生成相关的Excel函数。" />
+    <MESSAGE value="系统可以生成相关插入数据的模版，路径问题还需要解决，系统问题需要解决(Mac和Window)" />
+    <option name="LAST_COMMIT_MESSAGE" value="系统可以生成相关插入数据的模版，路径问题还需要解决，系统问题需要解决(Mac和Window)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
