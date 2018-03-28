@@ -1,13 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
   User: mickey
-  Date: 2018/3/27
-  Time: 15:59
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: mickey
   Date: 2018/3/23
   Time: 14:22
   To change this template use File | Settings | File Templates.
@@ -28,6 +21,7 @@
 
 </head>
 <body>
+<h1>第一步：选择相关的PDF模版</h1>
 <div id="pdf_viewer"></div>
 <p style="padding-left: 30px; padding-right: 30px;">
     <script type="text/javascript">

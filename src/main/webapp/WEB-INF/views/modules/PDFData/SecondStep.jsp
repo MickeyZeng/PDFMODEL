@@ -1,0 +1,30 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: mickey
+  Date: 2018/3/28
+  Time: 08:45
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="/WEB-INF/views/include/taglib.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript" src="${ctxStatic}/ckfinder/ckfinder.js"></script>
+<script type="text/javascript" src="${ctxStatic}/ckfinder/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="${ctxStatic}/ckfinder/jquery-v1-ui.js"></script>
+<script type="text/javascript" src="${ctxStatic}/ckfinder/jquery.media.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('a.media').media({width:800, height:600});
+    });
+</script>
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <h2>第二步：上传数据</h2>
+    <div id="pdfview">
+        <a class="media" href="${path}"></a>
+    </div>
+</body>
+</html>
