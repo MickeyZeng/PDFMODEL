@@ -10,6 +10,8 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -36,7 +38,6 @@ public class PDFUtils {
         Object[] keySetStr = keySet.toArray();
         for (Object s1 : keySetStr) {
             HSSFCell cell = row.createCell(i);
-            System.out.println(s1.toString());
             cell.setCellValue(s1.toString().substring(2));
             ++i;
         }

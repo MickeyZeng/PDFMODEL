@@ -11,6 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>CKFinder - Sample - Standalone</title>
+    <meta name="decorator" content="default"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="robots" content="noindex, nofollow" />
     <link href="${ctxStatic}/ckfinder/_samples/sample.css" rel="stylesheet" type="text/css" />
@@ -65,8 +66,7 @@
                 '</span>' +
                 '<a class="media" href="' + url + '">' +
                 '</a>' + '<div class="caption">' +
-                '<a href="${ctx}/PDFData/Data/sure?filename='+ fileUrl +'">' + sFileName + '</a> (' + data["fileSize"] + 'KB)' +
-                '</div>';
+                '<a href="${ctx}/PDFData/Data/sure?filename='+ fileUrl +'">下载该模版Excel数据模版</a></div>';
 
             $('a.media').media({width: 800, height: 600});
             return true;
