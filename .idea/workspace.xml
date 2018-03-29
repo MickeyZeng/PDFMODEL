@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
+    <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="测试类抽取">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/ExcelTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/ExcelTest.java" />
     </list>
@@ -46,10 +46,11 @@
       <file leaf-file-name="ExcelTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/ExcelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="67" column="48" lean-forward="false" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+            <state relative-caret-position="1080">
+              <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#519#527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -209,6 +210,11 @@
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
               <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -624,7 +630,7 @@
       <workItem from="1522122975903" duration="10465000" />
       <workItem from="1522197118110" duration="13386000" />
       <workItem from="1522218775639" duration="3406000" />
-      <workItem from="1522285587041" duration="1069000" />
+      <workItem from="1522285587041" duration="4672000" />
     </task>
     <task id="LOCAL-00001" summary="注意系统的缓存问题 新添加了新建行政机构的功能而且同时模版次数表会相对应增加">
       <created>1521624475890</created>
@@ -794,11 +800,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522286276463</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="测试类获取excel各种字符串。">
+      <created>1522286944749</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1522286944749</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91682000" />
+    <option name="totallyTimeSpent" value="95285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,11 +922,12 @@
     <MESSAGE value="导入数据第二步页面新建，并获取第一步中的PDF的url地址。" />
     <MESSAGE value="上传页面 完成第二步。" />
     <MESSAGE value="日更新。" />
-    <option name="LAST_COMMIT_MESSAGE" value="日更新。" />
+    <MESSAGE value="测试类获取excel各种字符串。" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试类获取excel各种字符串。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1277,10 +1291,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/ExcelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="67" column="48" lean-forward="false" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="1080">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#519#527#0" expanded="true" />
           </folding>
         </state>
       </provider>
