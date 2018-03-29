@@ -30,11 +30,11 @@
 
 <body>
 <h1>第二步：上传数据</h1>
-    <h3>上传Excel数据</h3>
     <div id="importBox">
-        <form id="importForm" action="${ctx}/PDFData/Data/upload" method="post" enctype="multipart/form-data" class="form-search" style="padding-left:20px;text-align:center;" onsubmit="loading('正在导入，请稍等...');">
-            <input id="uploadFile" name="file" type="file" style="width:330px"/>　
-            <input id="btnImportSubmit" class="btn btn-primary" type="submit" value="   导    入   "/>
+        <form id="importForm" action="${ctx}/PDFData/Data/upload" method="post" enctype="multipart/form-data" class="form-search"  onsubmit="loading('正在导入，请稍等...');">
+            <h3>上传Excel数据</h3>
+            <input id="uploadFile" name="file" type="file" style="width:200px"/>　
+            <input id="btnImportSubmit" class="btn btn-primary" type="submit" value=" 导  入 "/>
         </form>
     </div>
     <h3>选中的模版</h3>

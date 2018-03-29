@@ -2,14 +2,18 @@ package com.thinkgem.jeesite.modules.PDFData.web;
 
 
 import com.itextpdf.text.DocumentException;
+import com.thinkgem.jeesite.common.utils.excel.ImportExcel;
 import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.modules.PDFData.service.PDFDataService;
 import com.thinkgem.jeesite.modules.PDFData.utils.PDFUtils;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
@@ -30,15 +34,15 @@ public class PDFDataController extends BaseController {
     @RequestMapping(value = {"sure"})
     public String sure(String filename,Model model) throws IOException, DocumentException {
 //      System.out.println(filename);
-        //PDFUtils.findID(filename);
+        PDFUtils.findID(filename);
         String path = "/file" + filename.substring(38);
         model.addAttribute("path",path);
         return "modules/PDFData/SecondStep";
     }
 
     @RequiresPermissions("PDFData:Data:view")
-    @RequestMapping(value = {"upload"})
-    public String upload(){
+    @RequestMapping(value = {"upload"},method= RequestMethod.POST)
+    public String upload(MultipartFile file, RedirectAttributes redirectAttributes) throws IOException, InvalidFormatException {
 
         return "modules/PDFData/ThirdStep";
     }
