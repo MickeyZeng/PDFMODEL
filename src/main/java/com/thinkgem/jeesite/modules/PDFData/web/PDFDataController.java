@@ -2,6 +2,7 @@ package com.thinkgem.jeesite.modules.PDFData.web;
 
 
 import com.itextpdf.text.DocumentException;
+import com.thinkgem.jeesite.common.utils.FileUtils;
 import com.thinkgem.jeesite.common.utils.excel.ImportExcel;
 import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.modules.PDFData.service.PDFDataService;
@@ -14,7 +15,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 
@@ -42,8 +42,11 @@ public class PDFDataController extends BaseController {
 
     @RequiresPermissions("PDFData:Data:view")
     @RequestMapping(value = {"upload"},method= RequestMethod.POST)
-    public String upload(MultipartFile file, RedirectAttributes redirectAttributes) throws IOException, InvalidFormatException {
-
+    public String upload(MultipartFile file,String path) throws IOException, InvalidFormatException, DocumentException {
+        String filepath = "/Users/mickey/document/PDFModel/CKFile"+path.substring(5);
+//      System.out.println(filepath);
+        ImportExcel ei = new ImportExcel(file, 1, 0);
+        pdfDataService.uploadData(ei,filepath);
         return "modules/PDFData/ThirdStep";
     }
 }
