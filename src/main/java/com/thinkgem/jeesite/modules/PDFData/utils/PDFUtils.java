@@ -136,8 +136,7 @@ public class PDFUtils {
         if(!(PDFList.size() == excelList.size())){
             System.out.println("(*&&^^&^&&&！！！！");
         }else{
-            System.out.println("shuchu le ya!!!");
-            fillTemplate(path,"/Users/mickey/document/PDFModel/PDFTest/Test.pdf");
+            fillTemplate(PDFList,excelList,path, "/Users/mickey/document/PDFModel/PDFTest/TestDemp.pdf");
         }
     }
 
@@ -155,7 +154,6 @@ public class PDFUtils {
         String year = tempDate.substring(0, 4);
         String month = tempDate.substring(5, 7);
         String day = tempDate.substring(8, 10);
-        //System.out.println(year +"**"+ month +"&&"+ day );
         if (choice == 1) {
             return year;
         } else if (choice == 2) {
@@ -244,7 +242,7 @@ public class PDFUtils {
     }
 
 
-    public static void fillTemplate(String path, String outputFileName)
+    public static void fillTemplate(List PDFList, List excelList, String path, String outputFileName)
             throws IOException, DocumentException {
 //        System.out.println("=========="+businessLicense.getEstablishDate());
         PdfReader reader = new PdfReader(path); // 模版文件目录
@@ -287,7 +285,5 @@ public class PDFUtils {
         ps.close();
         reader.close();
     }
-
-
 
 }
