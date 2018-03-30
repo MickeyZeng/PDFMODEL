@@ -1,8 +1,6 @@
 package com.thinkgem.jeesite.modules.PDFData.utils;
 
-import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.pdf.AcroFields;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfReader;
@@ -15,7 +13,6 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.*;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -25,7 +22,7 @@ public class PDFUtils {
     public static final String CHARACTOR_FONT_CH_FILE = "/Users/mickey/document/PDFModel/jeesite-master/lib/simhei.ttf";
 
     //为用户下载一个与用户选择的模版匹配的数据模版 excel格式。
-    public static void findID(String filename) throws IOException, DocumentException {
+    public static void findID(String filename, String file) throws IOException, DocumentException {
 
         //开始创建excel
         HSSFWorkbook workbook = new HSSFWorkbook();
@@ -50,7 +47,7 @@ public class PDFUtils {
             ++i;
         }
         try {
-            FileOutputStream fos = new FileOutputStream("/Users/mickey/document/PDFModel/ExcelTest/Test.xls");
+            FileOutputStream fos = new FileOutputStream("/Users/mickey/document/PDFModel/ExcelTest/"+ file +"模版.xls");
             workbook.write(fos);
             System.out.println("写入成功");
             fos.close();
@@ -62,6 +59,7 @@ public class PDFUtils {
         out.close();
     }
 
+    //获取PDF里面的iD
     public static List<String> getPDFID(String filename) throws IOException, DocumentException {
         List<String> list = new ArrayList<String>();
         String filename1 = "/Users/mickey/document/PDFModel/PDFTest/Test.pdf";
@@ -134,10 +132,16 @@ public class PDFUtils {
 
     public static void fill(List PDFList, List excelList,String path) throws IOException, DocumentException {
         if(!(PDFList.size() == excelList.size())){
-            System.out.println("(*&&^^&^&&&！！！！");
+            //需要系统报错！
+
         }else{
-            fillTemplate(PDFList,excelList,path, "/Users/mickey/document/PDFModel/PDFTest/TestDemo.pdf");
+            //为PDF命名的函数方法。
+            fillTemplate(PDFList,excelList,path, name(excelList));
         }
+    }
+
+    public static String name(List list){
+        return "/Users/mickey/document/PDFModel/PDFTest/" + list.get(0) +""+ list.get(list.size()-1) + ".pdf";
     }
 
 
@@ -244,7 +248,7 @@ public class PDFUtils {
 
     public static void fillTemplate(List PDFList, List excelList, String path, String outputFileName)
             throws IOException, DocumentException {
-//        System.out.println("=========="+businessLicense.getEstablishDate());
+
         PdfReader reader = new PdfReader(path); // 模版文件目录
 
         //String outputFileName = "E:\\pdf\\" + BusinessLicense.getStuNo() + BusinessLicense.getStuName() + ".pdf" ;

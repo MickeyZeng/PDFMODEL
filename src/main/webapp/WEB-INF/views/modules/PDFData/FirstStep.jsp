@@ -66,7 +66,8 @@
                 '</span>' +
                 '<a class="media" href="' + url + '">' +
                 '</a>' + '<div class="caption">' +
-                '<a href="${ctx}/PDFData/Data/sure?filename='+ fileUrl +'">下载该模版Excel数据模版</a></div>';
+                '<a href="${ctx}/PDFData/Data/sure?filename='+ fileUrl +'&file='+ sFileName +'">下载该模版Excel数据模版</a></div>' +
+                '<div class="caption"><a href="${ctx}/PDFData/Data/jump?filename='+ fileUrl +'">已下载模版下一步</a></div>';
 
             $('a.media').media({width: 800, height: 600});
             return true;
@@ -101,5 +102,8 @@
 
     </script>
 </p>
+<form action="${ctx}/PDFData/Data/sure">
+    <input type="button" value="下一步"/><span>已下载模版</span>
+</form>>
 </body>
 </html>

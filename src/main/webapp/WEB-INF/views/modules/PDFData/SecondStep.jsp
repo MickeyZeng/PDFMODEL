@@ -31,10 +31,12 @@
 <body>
 <h1>第二步：上传数据</h1>
     <div id="importBox">
-        <form id="importForm" action="${ctx}/PDFData/Data/upload?path=${path}" method="post" enctype="multipart/form-data" class="form-search" >
+        <form id="importForm" action="${ctx}/PDFData/Data/upload?path=${path}" method="post" enctype="multipart/form-data" class="form-search">
             <h3>上传Excel数据</h3>
-            <input id="uploadFile" name="file" type="file" style="width:200px"/>　
-            <input id="btnImportSubmit" class="btn btn-primary" type="submit" value=" 导  入 "/>
+            <!-- accept是控制input只能接收xls和xlsx格式的文件-->
+            <input id="uploadFile" name="file" type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" onsubmit="loading('正在导入，请稍等...');" style="width:200px"/>
+            <input id="btnImportSubmit" class="btn btn-primary" type="submit" value=" 确 认 导 入 "/>
+            <span>仅允许导入“xls”或“xlsx”格式文件!</span>
         </form>
     </div>
     <h3>选中的模版</h3>

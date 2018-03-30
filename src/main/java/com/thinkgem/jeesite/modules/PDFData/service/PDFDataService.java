@@ -18,10 +18,15 @@ import java.util.List;
 @Transactional(readOnly = true)
 public class PDFDataService extends BaseService {
 
-    public void uploadData(ImportExcel ei,String path) throws IOException, InvalidFormatException, DocumentException {
+    public int uploadData(ImportExcel ei,String path) throws IOException, InvalidFormatException, DocumentException {
         List PDFList = PDFUtils.getPDFID(path);
-        Row r = ei.getRow(1);
-        List ExcelList = PDFUtils.read(r);
-        PDFUtils.fill(PDFList,ExcelList,path);
+        int numRow = ei.getDataRowNum();
+        //每一行数据生成一个PDF 第0行并不需要 直接从有数据的第一行开始
+        for (int flag = 1 ; flag < numRow ; flag++) {
+            Row r = ei.getRow(flag);
+            List ExcelList = PDFUtils.read(r);
+            PDFUtils.fill(PDFList, ExcelList, path);
+        }
+        return numRow;
     }
 }
