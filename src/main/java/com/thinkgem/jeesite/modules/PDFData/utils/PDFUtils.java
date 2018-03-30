@@ -136,7 +136,7 @@ public class PDFUtils {
         if(!(PDFList.size() == excelList.size())){
             System.out.println("(*&&^^&^&&&！！！！");
         }else{
-            fillTemplate(PDFList,excelList,path, "/Users/mickey/document/PDFModel/PDFTest/TestDemp.pdf");
+            fillTemplate(PDFList,excelList,path, "/Users/mickey/document/PDFModel/PDFTest/TestDemo.pdf");
         }
     }
 
@@ -251,35 +251,27 @@ public class PDFUtils {
         PdfStamper ps = new PdfStamper(reader, new FileOutputStream(
                 outputFileName)); // 生成的输出流
 
-
         AcroFields s = ps.getAcroFields();
-
-        int index = 0;
-        Map<String, AcroFields.Item> fieldMap = s.getFields();              // pdf表单相关信息展示
-
-        for (Map.Entry<String, AcroFields.Item> entry : fieldMap.entrySet()) {
-
-            System.out.print(index);
-            String name = entry.getKey();                                   // name就是pdf模版中各个文本域的名字
-            AcroFields.Item item = (AcroFields.Item) entry.getValue();
-            System.out.println("[name]:" + name + ", [value]: " + item);
-            index++;
-        }
-        ;
 
         BaseFont bfChinese = BaseFont.createFont(CHARACTOR_FONT_CH_FILE, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
 
-        DateFormat df = new SimpleDateFormat("yyyy年MM月dd日");
+        //DateFormat df = new SimpleDateFormat("yyyy年MM月dd日");
 
         s.addSubstitutionFont(bfChinese);
 
+        for(int index = 0 ; index < PDFList.size() ; index++){
+            s.setFieldProperty(PDFList.get(index).toString(), "clrflags", 1, null);
+            s.setFieldProperty(PDFList.get(index).toString(), "textfont", bfChinese, null);
+            s.setFieldProperty(PDFList.get(index).toString(), "textsize", new Float(15), null);
 
-        //中文姓名 注入
-        s.setFieldProperty("idcertificateCode", "clrflags", 1, null);
-        s.setFieldProperty("idcertificateCode", "textfont", bfChinese, null);
-        s.setFieldProperty("idcertificateCode", "textsize", new Float(15), null);
-
-        s.setField("idcertificateCode","Fuckyou!!!");
+            s.setField(PDFList.get(index).toString(),excelList.get(index).toString());
+        }
+//        中文姓名 注入功能代码
+//        s.setFieldProperty("idcertificateCode", "clrflags", 1, null);
+//        s.setFieldProperty("idcertificateCode", "textfont", bfChinese, null);
+//        s.setFieldProperty("idcertificateCode", "textsize", new Float(15), null);
+//
+//        s.setField("idcertificateCode","Fuckyou!!!");
 
         ps.setFormFlattening(true); // 这句不能少
         ps.close();
