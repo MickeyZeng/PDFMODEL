@@ -60,7 +60,8 @@ public class PDFDataController extends BaseController {
     @RequiresPermissions("PDFData:Data:view")
     @RequestMapping(value = {"finish"})
     public String finish(RedirectAttributes redirectAttributes,int num){
-        addMessage(redirectAttributes, "已成功导入 "+num+"的PDF证照");
+        num = num - 1;
+        addMessage(redirectAttributes, "已成功导入 "+num+"张PDF证照");
         return "redirect:" + adminPath + "/PDFData/Data/index";
     }
 

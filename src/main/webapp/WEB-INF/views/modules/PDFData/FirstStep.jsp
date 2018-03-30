@@ -23,6 +23,7 @@
 </head>
 <body>
 <h1>第一步：选择相关的PDF模版</h1>
+<sys:message content="${message}"/>
 <div id="pdf_viewer"></div>
 <p style="padding-left: 30px; padding-right: 30px;">
     <script type="text/javascript">
@@ -99,11 +100,7 @@
 
         // The "create" function can also accept an object as the only argument.
         // CKFinder.create( { basePath : '../', selectActionFunction : showFileInfo } );
-
     </script>
 </p>
-<form action="${ctx}/PDFData/Data/sure">
-    <input type="button" value="下一步"/><span>已下载模版</span>
-</form>>
 </body>
 </html>
