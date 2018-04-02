@@ -29,4 +29,9 @@ public class PDFDataService extends BaseService {
         }
         return numRow;
     }
+
+    public int uploadDataForOne(List<String> resultList, String filepath, List<String> list) throws IOException, DocumentException {
+        PDFUtils.fill(list,resultList,filepath);
+        return 1;
+    }
 }
