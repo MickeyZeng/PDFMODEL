@@ -7,13 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/thinkgem/jeesite/test/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/com/thinkgem/jeesite/test/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/thinkgem/jeesite/tools/CodeCounter.class" afterPath="$PROJECT_DIR$/target/test-classes/com/thinkgem/jeesite/tools/CodeCounter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jeesite.iml" afterPath="$PROJECT_DIR$/jeesite.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/service/PDFDataService.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/service/PDFDataService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/web/PDFDataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/web/PDFDataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/UploadForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/UploadForm.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -661,7 +658,7 @@
       <workItem from="1522371754778" duration="8292000" />
       <workItem from="1522388649872" duration="3223000" />
       <workItem from="1522476772203" duration="149000" />
-      <workItem from="1522552878782" duration="12691000" />
+      <workItem from="1522552878782" duration="12786000" />
     </task>
     <task id="LOCAL-00001" summary="注意系统的缓存问题 新添加了新建行政机构的功能而且同时模版次数表会相对应增加">
       <created>1521624475890</created>
@@ -901,11 +898,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522552904540</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="模版注入功能完成，不过里面的一些页面和信息反馈还需要增加，另外最后的时候需要测试加入一些字段为空的时候，注入是否会出现问题。">
+      <created>1522665709187</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1522665709187</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133485000" />
+    <option name="totallyTimeSpent" value="133580000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -996,7 +1000,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="改正新建模版元素功能页面的错误。" />
     <MESSAGE value="创建元素功能中，完成了对归属公司和归属机构的限定。" />
     <MESSAGE value="成功接入PDF上传功能页面，还需要修改。" />
     <MESSAGE value="PDF模版上传功能大致完成。" />
@@ -1021,7 +1024,8 @@
     <MESSAGE value="完善上传功能。" />
     <MESSAGE value="新建单体数据注入功能（未完成）" />
     <MESSAGE value="又是元气满满的一天！！！" />
-    <option name="LAST_COMMIT_MESSAGE" value="又是元气满满的一天！！！" />
+    <MESSAGE value="模版注入功能完成，不过里面的一些页面和信息反馈还需要增加，另外最后的时候需要测试加入一些字段为空的时候，注入是否会出现问题。" />
+    <option name="LAST_COMMIT_MESSAGE" value="模版注入功能完成，不过里面的一些页面和信息反馈还需要增加，另外最后的时候需要测试加入一些字段为空的时候，注入是否会出现问题。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
