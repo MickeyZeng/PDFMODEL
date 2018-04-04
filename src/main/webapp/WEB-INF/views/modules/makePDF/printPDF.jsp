@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.io.File" %><%--
   Created by IntelliJ IDEA.
   User: mickey
   Date: 2018/4/3
@@ -14,9 +14,9 @@
 <head>
     <title>Moudle Demo</title>
 </head>
-<script type="text/javascript" src="../js/html2canvas.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/html2canvas.js"></script>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-3.2.1.js"></script>--%>
-<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jquery-1.7.2.js"></script>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery.js"></script>--%>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-1.8.3.min.js"></script>--%>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-1.8.3.js"></script>--%>
@@ -488,46 +488,7 @@
         <h2><a href="#">元素</a></h2>
         <div>
             <ul>
-                <div class="components Elements" id="Photo">照片</div>
-                <div class="components Elements" id="Name">名字</div>
-                <div class="components Elements" id="EngFamilyName">姓(英)</div>
-                <div class="components Elements" id="EngName">名(英)</div>
-                <div class="components Elements" id="Sex">性别</div>
-                <div class="components Elements" id="EngSex">性别(英)</div>
-
-                <div class="components Elements" id="certificateTypeId">证照类型</div>
-                <div class="components Elements" id="certificateCode">证照编号</div>
-                <div class="components Elements" id="certificateName">公司名称</div>
-                <div class="components Elements" id="office">颁发机构id</div>
-                <div class="components Elements" id="tyshxydm">统一社会信用代码</div>
-                <div class="components Elements" id="establishDate">成立日期</div>
-                <div class="components Elements" id="establishDateYear">成立日期(年)</div>
-                <div class="components Elements" id="establishDateMonth">成立日期(月)</div>
-                <div class="components Elements" id="establishDateDay">成立日期(日)</div>
-                <div class="components Elements" id="effectiveDateStar">证照有效期（起始）</div>
-                <div class="components Elements" id="effectiveDateEnd">证照有效期（截至）</div>
-                <div class="components Elements" id="registeredType">注册公司类型</div>
-                <div class="components Elements" id="registeredCapital">注册资本</div>
-                <div class="components Elements" id="address">地址</div>
-                <div class="components Elements" id="persionName">法人姓名</div>
-                <div class="components Elements" id="persionIdType">法人身份证件类型</div>
-                <div class="components Elements" id="personId">法人身份证件号码</div>
-                <div class="components Elements" id="persionPhone">法人联系方式</div>
-                <div class="components Elements" id="handlerName">经办人姓名</div>
-                <div class="components Elements" id="handlerIdType">经办人身份证件类型</div>
-                <div class="components Elements" id="handlerId">经办人身份证件号码</div>
-                <div class="components Elements" id="handlerPhone">经办人联系方式</div>
-
-                <div class="components Elements" id="scope">经营/业务/许可范围</div>
-                <div class="components Elements" id="buildingName">建筑名称</div>
-                <div class="components Elements" id="floorNumber">层数</div>
-                <div class="components Elements" id="useArea">使用面积</div>
-                <div class="components Elements" id="usage1">使用情况</div>
-                <div class="components Elements" id="dealfireFacilities">现有消防设施</div>
-                <div class="components Elements" id="postcode">邮政编码</div>
-                <div class="components Elements" id="area">所属区域</div>
-
-
+                <div class="components Elements" id="test">测试的呀大哥</div>
             </ul>
         </div>
         <h2><a href="#">按钮选择</a></h2>
