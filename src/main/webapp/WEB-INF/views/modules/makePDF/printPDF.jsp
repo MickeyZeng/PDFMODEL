@@ -24,38 +24,38 @@
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-1.12.4.js"></script>--%>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-ui.js"></script>--%>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-v1.min.js"></script>--%>
-<script type="text/javascript" src="../js/jquery-v1-ui.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jquery-v1-ui.js"></script>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery-ui.min.js"></script>--%>
-<script type="text/javascript" src="../js/jscolor.js"></script>
-<script type="text/javascript" src="../js/jscolor.min.js"></script>
-<script type="text/javascript" src="../js/FileSaver.js"></script>
-<script type="text/javascript" src="../js/FileSaver.min.js"></script>
-<script type="text/javascript" src="../js/canvas-toBlob.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css"/>
-<link rel="stylesheet" type="text/css" href="../css/pdfMaker.css"/>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jscolor.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jscolor.min.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/FileSaver.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/FileSaver.min.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/js/canvas-toBlob.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/PDFjs/css/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/PDFjs/css/pdfMaker.css"/>
 
 <%--ckfinder相关的css&js--%>
-<link rel="stylesheet" type="text/css" href="../ckfinder/_samples/sample.css"/>
-<script type="text/javascript" src="../ckfinder/ckfinder.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/ckfinder/_samples/sample.css"/>
+<script type="text/javascript" src="${ctxStatic}/ckfinder/ckfinder.js"></script>
 <%--pdf的IE预览插件--%>
-<script type="text/javascript" src="../js/jquery.media.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jquery.media.js"></script>
 <%--<!--图片相关的js代码-->--%>
 <%--<script type="text/javascript" src="${ctxStatic}/js/images.js"></script>--%>
 <!--生成PDF的相关js代码-->
-<script type="text/javascript" src="../js/jspdf.debug.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jspdf.debug.js"></script>
 <%--工具栏自适应位置--%>
-<script type="text/javascript" src="../js/jquery.vgrid.min.js"></script>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/jquery.vgrid.min.js"></script>
 <%--&lt;%&ndash;右键菜单插件&ndash;%&gt;--%>
 <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/css/jquery.contextmenu.css"/>--%>
 <%--<script type="text/javascript" src="${ctxStatic}/js/jquery.contextmenu.js"></script>--%>
 <%--右键菜单插件--%>
-<link rel="stylesheet" type="text/css" href="../css/context.standalone.css"/>
-<script type="text/javascript" src="../js/context.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/PDFjs/css/context.standalone.css"/>
+<script type="text/javascript" src="${ctxStatic}/PDFjs/context.js"></script>
 <%--按钮UI插件--%>
-<link rel="stylesheet" type="text/css" href="../css/bttn.min.css"/>
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/PDFjs/css/bttn.min.css"/>
 <%--开关按钮插件--%>
-<link rel="stylesheet" type="text/css" href="../css/honeySwitch.css">
-<script type="text/javascript" src="../js/honeySwitch.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/PDFjs/css/honeySwitch.css">
+<script type="text/javascript" src="${ctxStatic}/PDFjs/js/honeySwitch.js"></script>
 <script>
     //自动填充工具栏（util）的div的排版位置
     $(function () {
