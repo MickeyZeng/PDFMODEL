@@ -392,6 +392,11 @@ public class UserController extends BaseController {
 		}
 		return mapList;
 	}
+
+	@RequestMapping(value = "aboutUs")
+	public String aboutUs(){
+		return "modules/sys/aboutUs";
+	}
     
 //	@InitBinder
 //	public void initBinder(WebDataBinder b) {
