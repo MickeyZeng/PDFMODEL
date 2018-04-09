@@ -50,7 +50,11 @@ public class ModTimesController extends BaseController {
 	@RequiresPermissions("sysmod:modTimes:view")
 	@RequestMapping(value = {"list", ""})
 	public String list(ModTimes modTimes, HttpServletRequest request, HttpServletResponse response, Model model) {
-		Page<ModTimes> page = modTimesService.findPage(new Page<ModTimes>(request, response), modTimes); 
+		String flag = UserUtils.getUser().getUserType();
+		if(!(flag.equals("1"))) {
+			modTimes.setCompany(UserUtils.getUser().getCompany());
+		}
+		Page<ModTimes> page = modTimesService.findPage(new Page<ModTimes>(request, response), modTimes);
 		model.addAttribute("page", page);
 		return "modules/sysmod/modTimesList";
 	}

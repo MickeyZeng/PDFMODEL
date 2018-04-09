@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.modules.modelement.service;
 import java.util.List;
 
 import com.thinkgem.jeesite.common.utils.EmailUtils;
+import com.thinkgem.jeesite.modules.sys.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +27,9 @@ public class SysModelementService extends CrudService<SysModelementDao, SysModel
 
 	@Autowired
 	private SysModelementDao sysModelementDao;
+
+	@Autowired
+	UserDao userDao;
 
 	public SysModelement get(String id) {
 		return super.get(id);
@@ -62,7 +66,7 @@ public class SysModelementService extends CrudService<SysModelementDao, SysModel
 	}
 
 	public void sendMail(SysModelement sysModelement) throws Exception {
-		EmailUtils.WriteLetter(sysModelement.getCreateBy().getEmail());
+		EmailUtils.WriteLetter(userDao.get(sysModelement.getCreateBy().getId()).getEmail());
 	}
 
 	public SysModelement getByUser(String id) {
