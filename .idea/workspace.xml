@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jeesite/WEB-INF/ckfinder.xml" afterPath="$PROJECT_DIR$/target/jeesite/WEB-INF/ckfinder.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,14 +24,14 @@
       <file leaf-file-name="printPDF.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="436" column="22" lean-forward="true" selection-start-line="436" selection-start-column="22" selection-end-line="436" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="635" column="0" lean-forward="true" selection-start-line="635" selection-start-column="0" selection-end-line="635" selection-end-column="0" />
               <folding>
-                <marker date="1523255157877" expanded="true" signature="16826:16851" ph="..." />
-                <marker date="1523255157877" expanded="true" signature="18233:18258" ph="..." />
-                <marker date="1523255157877" expanded="true" signature="19816:19858" ph="..." />
-                <marker date="1523255157877" expanded="true" signature="21098:21120" ph="..." />
-                <marker date="1523255157877" expanded="true" signature="30923:30930" ph="×" />
+                <marker date="1523258025612" expanded="true" signature="16826:16851" ph="..." />
+                <marker date="1523258025612" expanded="true" signature="18233:18258" ph="..." />
+                <marker date="1523258025612" expanded="true" signature="19816:19858" ph="..." />
+                <marker date="1523258025612" expanded="true" signature="21098:21120" ph="..." />
+                <marker date="1523258025612" expanded="true" signature="30872:30879" ph="×" />
               </folding>
             </state>
           </provider>
@@ -54,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/FirstStep.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="52" />
+              <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="53" />
               <folding>
                 <marker date="1522388805383" expanded="true" signature="2159:2176" ph="..." />
               </folding>
@@ -608,7 +605,7 @@
       <workItem from="1523151062671" duration="764000" />
       <workItem from="1523234305762" duration="7071000" />
       <workItem from="1523242931624" duration="3114000" />
-      <workItem from="1523253138408" duration="2563000" />
+      <workItem from="1523253138408" duration="3203000" />
     </task>
     <task id="LOCAL-00001" summary="注意系统的缓存问题 新添加了新建行政机构的功能而且同时模版次数表会相对应增加">
       <created>1521624475890</created>
@@ -911,11 +908,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523241462764</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="完善上传功能。">
+      <created>1523256874653</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1523256874653</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160200000" />
+    <option name="totallyTimeSpent" value="160840000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,7 +954,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22603719" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22603719" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1019,7 +1023,6 @@
     <MESSAGE value="日结束，休息！" />
     <MESSAGE value="注入功能完成，还有部分逻辑需要修改。" />
     <MESSAGE value="完成数据注入功能。" />
-    <MESSAGE value="完善上传功能。" />
     <MESSAGE value="新建单体数据注入功能（未完成）" />
     <MESSAGE value="又是元气满满的一天！！！" />
     <MESSAGE value="模版注入功能完成，不过里面的一些页面和信息反馈还需要增加，另外最后的时候需要测试加入一些字段为空的时候，注入是否会出现问题。" />
@@ -1031,7 +1034,8 @@
     <MESSAGE value="日更新，且修改了相关部门只能显示相关部门的元素。" />
     <MESSAGE value="制作模版页面从数据库中读取相关的数据到元素的功能列中。" />
     <MESSAGE value="模版使用次数显示进行控制，另外审核元素后，邮箱通知异常已修改。" />
-    <option name="LAST_COMMIT_MESSAGE" value="模版使用次数显示进行控制，另外审核元素后，邮箱通知异常已修改。" />
+    <MESSAGE value="完善上传功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善上传功能。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1339,6 +1343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1371,14 +1376,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/SecondStep.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1387,10 +1384,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/FirstStep.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="52" />
+          <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="53" />
           <folding>
             <marker date="1522388805383" expanded="true" signature="2159:2176" ph="..." />
           </folding>
@@ -1399,14 +1404,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="436" column="22" lean-forward="true" selection-start-line="436" selection-start-column="22" selection-end-line="436" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="635" column="0" lean-forward="true" selection-start-line="635" selection-start-column="0" selection-end-line="635" selection-end-column="0" />
           <folding>
-            <marker date="1523255157877" expanded="true" signature="16826:16851" ph="..." />
-            <marker date="1523255157877" expanded="true" signature="18233:18258" ph="..." />
-            <marker date="1523255157877" expanded="true" signature="19816:19858" ph="..." />
-            <marker date="1523255157877" expanded="true" signature="21098:21120" ph="..." />
-            <marker date="1523255157877" expanded="true" signature="30923:30930" ph="×" />
+            <marker date="1523258025612" expanded="true" signature="16826:16851" ph="..." />
+            <marker date="1523258025612" expanded="true" signature="18233:18258" ph="..." />
+            <marker date="1523258025612" expanded="true" signature="19816:19858" ph="..." />
+            <marker date="1523258025612" expanded="true" signature="21098:21120" ph="..." />
+            <marker date="1523258025612" expanded="true" signature="30872:30879" ph="×" />
           </folding>
         </state>
       </provider>

@@ -599,15 +599,14 @@
             }
 
 
-            function viewBS(startupPath) {
+            function viewBS() {
                 // You can use the "CKFinder" class to render CKFinder in a page:
                 var finder = new CKFinder();
                 finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
 
                 //Startup path in a form: "Type:/path/to/directory/"
                 finder.readOnly = true;
-                finder.resourceType = "证照模板文件夹";
-                finder.startupPath = startupPath;
+                finder.resourceType = "Group";
                 finder.selectActionFunction = viewSFF;
                 finder.popup();
             }
@@ -625,7 +624,7 @@
             // This is a sample function which is called when a file is selected in CKFinder.
             function viewSFF(fileUrl, data) {
                 // document.getElementById('xFilePath').value = fileUrl;
-                var url = "/picFile" + fileUrl;
+                var url = "/file/" + fileUrl.substring(38);
                 var sFileName = this.getSelectedFile().name;
                 document.getElementById('pdf').innerHTML =
                     '<span class="close cursor" onclick="closeWindow()"> ' + '&times;' +
