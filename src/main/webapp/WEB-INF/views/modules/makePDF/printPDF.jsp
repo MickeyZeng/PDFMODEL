@@ -57,6 +57,21 @@
 <link rel="stylesheet" type="text/css" href="${ctxStatic}/PDFjs/css/honeySwitch.css">
 <script type="text/javascript" src="${ctxStatic}/PDFjs/js/honeySwitch.js"></script>
 <script>
+
+    $(document).ready(function(){
+        //向元素列 插入从数据库提取出来相关的元素
+        var elementList = "${elementNames}".split(",");
+        var elementIDsList = "${PDFIDs}".split(",");
+        var div1 = document.getElementById('specialElement');
+        var code = "<ul>";
+        for(var flag1 = 0 ; flag1 < elementList.length ; flag1++){
+            alert(elementList[flag1]+"^^^^^"+elementIDsList[flag1]);
+            code += '<div class="components Elements" id='+ elementIDsList[flag1] +'>'+ elementList[flag1] +'</div>';
+        }
+        code += '</ul>';
+        div1.innerHTML = code ;
+    });
+
     //自动填充工具栏（util）的div的排版位置
     $(function () {
         $("#util").vgrid({
@@ -486,10 +501,8 @@
         </div>
         <%--变换PDF文本域的主要可拖拽元素（Mickey）--%>
         <h2><a href="#">元素</a></h2>
-        <div>
-            <ul>
-                <div class="components Elements" id="test">测试的呀大哥</div>
-            </ul>
+        <div id="specialElement">
+
         </div>
         <h2><a href="#">按钮选择</a></h2>
         <div>
