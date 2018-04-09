@@ -15,17 +15,8 @@
     <title>Moudle Demo</title>
 </head>
 <script type="text/javascript" src="${ctxStatic}/PDFjs/html2canvas.js"></script>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-3.2.1.js"></script>--%>
 <script type="text/javascript" src="${ctxStatic}/PDFjs/jquery-1.7.2.js"></script>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery.js"></script>--%>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-1.8.3.min.js"></script>--%>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-1.8.3.js"></script>--%>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery.min.js"></script>--%>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-1.12.4.js"></script>--%>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-ui.js"></script>--%>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-v1.min.js"></script>--%>
 <script type="text/javascript" src="${ctxStatic}/PDFjs/jquery-v1-ui.js"></script>
-<%--<script type="text/javascript" src="${ctxStatic}/js/jquery-ui.min.js"></script>--%>
 <script type="text/javascript" src="${ctxStatic}/PDFjs/jscolor.js"></script>
 <script type="text/javascript" src="${ctxStatic}/PDFjs/jscolor.min.js"></script>
 <script type="text/javascript" src="${ctxStatic}/PDFjs/FileSaver.js"></script>
@@ -65,7 +56,6 @@
         var div1 = document.getElementById('specialElement');
         var code = "<ul>";
         for(var flag1 = 0 ; flag1 < elementList.length ; flag1++){
-            alert(elementList[flag1]+"^^^^^"+elementIDsList[flag1]);
             code += '<div class="components Elements" id='+ elementIDsList[flag1] +'>'+ elementList[flag1] +'</div>';
         }
         code += '</ul>';
@@ -430,8 +420,7 @@
                 } else if (ui.helper.hasClass("othersElement")) {
 
                     <!--第七个组件的生成 图片的拖拉(Mickey)-->
-
-                    var fileName = "/picFile/userfiles/modelPhoto/" + ui.helper.attr("id");
+                    var fileName = "/file/"+ui.helper.attr("id").substring(38);
                     //alert(fileName);
                     var el = $("<div class='printComponents picComponents'  onmousedown='setIndex(event,this)' tabindex='0'></div>");
 
@@ -588,13 +577,11 @@
         <%--ckfinder相关代码--%>
         <script type="text/javascript">
 
-            function BrowseServer(startupPath, selectAD) {
+            function BrowseServer(selectAD) {
                 // You can use the "CKFinder" class to render CKFinder in a page:
                 var finder = new CKFinder();
                 finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
-                finder.startupPath = startupPath;
-
-                finder.resourceType = "元素图片文件夹";
+                finder.resourceType = "Pictures";
                 finder.selectActionFunction = SetFileField;
                 finder.selectActionData = selectAD;
                 finder.popup();
@@ -737,7 +724,7 @@
             <button id="saveTxt" class="bttn-unite bttn-xs bttn-primary" onclick="saveTxt()">下载图片</button>
             <input id="xFilePath" name="FilePath" type="text" size="60" style="display: none"/>
             <%--ui风格按钮--%>
-            <button class="bttn-unite bttn-xs bttn-primary" onclick="BrowseServer('元素图片文件夹:/','xFilePath');">浏览文件夹
+            <button class="bttn-unite bttn-xs bttn-primary" onclick="BrowseServer('xFilePath');">上传组件
             </button>
             <button class="bttn-unite bttn-xs bttn-primary" onclick="viewBS('证照模板文件夹:/');">查看历史模板</button>
             <%--<input type="button" id="downloadPDF" onclick="print()" value="下载PDF"/>--%>
@@ -1506,7 +1493,7 @@
         var splitPoint = inputContent.lastIndexOf(".");
         var split = inputContent.lastIndexOf("/");
         var id_el = inputContent.substring(split + 1, splitPoint);
-        var new_id = inputContent.substring(split + 1, inputContent.length);
+        var new_id = inputContent;
         if (document.getElementById(id_el)) {
             $("#imgid").val("");
             $("#imagefile").val("");

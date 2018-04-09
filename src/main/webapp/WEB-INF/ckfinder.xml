@@ -54,6 +54,15 @@
 				<deniedExtensions></deniedExtensions>
 			</type>
 		</type>
+		<type>
+			<type name="Pictures">
+				<url>%BASE_URL%Pictures</url>
+				<directory>%BASE_DIR%Pictures</directory>
+				<maxSize>5M</maxSize>
+				<allowedExtensions>bmp,gif,jpeg,jpg,png</allowedExtensions>
+				<deniedExtensions></deniedExtensions>
+			</type>
+		</type>
 	</types>
 	<accessControls>
 		<accessControl>
