@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.modules.modelement.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.thinkgem.jeesite.modules.sys.entity.User;
 import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,8 +51,14 @@ public class SysModelementController extends BaseController {
 	@RequiresPermissions("modelement:sysModelement:view")
 	@RequestMapping(value = {"list", ""})
 	public String list(SysModelement sysModelement, HttpServletRequest request, HttpServletResponse response, Model model) {
-		Page<SysModelement> page = sysModelementService.findPage(new Page<SysModelement>(request, response), sysModelement); 
-		model.addAttribute("page", page);
+		if(UserUtils.getUser().getUserType().equals("1")) {
+			Page<SysModelement> page = sysModelementService.findPage(new Page<SysModelement>(request, response), sysModelement);
+			model.addAttribute("page", page);
+		}else{
+			sysModelement.setOffice(UserUtils.getUser().getOffice());
+			Page<SysModelement> page = sysModelementService.findPageByUserType(new Page<SysModelement>(request, response),sysModelement);
+			model.addAttribute("page", page);
+		}
 		return "modules/modelement/sysModelementList";
 	}
 

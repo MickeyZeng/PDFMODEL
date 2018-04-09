@@ -68,4 +68,10 @@ public class SysModelementService extends CrudService<SysModelementDao, SysModel
 	public SysModelement getByUser(String id) {
 		return sysModelementDao.getByUser(id);
 	}
+
+	public Page<SysModelement> findPageByUserType(Page<SysModelement> sysModelementPage, SysModelement sysModelement) {
+		sysModelement.setPage(sysModelementPage);
+		sysModelementPage.setList(sysModelementDao.findListByUserType(sysModelement));
+		return sysModelementPage;
+	}
 }

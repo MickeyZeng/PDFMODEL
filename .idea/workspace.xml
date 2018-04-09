@@ -7,9 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/dao/SysModelementDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/dao/SysModelementDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/service/SysModelementService.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/service/SysModelementService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/modelement/SysModelementDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/modelement/SysModelementDao.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,44 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="printPDF.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="490" column="71" lean-forward="false" selection-start-line="490" selection-start-column="71" selection-end-line="490" selection-end-column="71" />
-              <folding>
-                <marker date="1522835278295" expanded="true" signature="17080:17105" ph="..." />
-                <marker date="1522835278295" expanded="true" signature="18487:18512" ph="..." />
-                <marker date="1522835278295" expanded="true" signature="20070:20112" ph="..." />
-                <marker date="1522835278295" expanded="true" signature="21365:21387" ph="..." />
-                <marker date="1522835278295" expanded="true" signature="31339:31346" ph="×" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDFDataController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/web/PDFDataController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,7 +45,6 @@
       <find>checkList</find>
       <find>save</find>
       <find>create</find>
-      <find>getByUser</find>
       <find>footer</find>
       <find>showFileInfo</find>
       <find>xFilePath</find>
@@ -93,6 +60,9 @@
       <find>importForm</find>
       <find>form</find>
       <find>userForm</find>
+      <find>findCheckPage</find>
+      <find>getByUser</find>
+      <find>findListByUserType</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,10 +90,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sysmod/dao/ModTimesDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/utils/EmailUtils.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/modelement/createElement.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/dao/SysModelementDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/service/SysModelementService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappings/modules/modelement/SysModelementDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/modelement/createElementType.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/UploadController.java" />
@@ -131,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/UploadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/uploadService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sysmod/service/ModTimesService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/OfficeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/OfficeService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/modelForm.jsp" />
@@ -155,8 +120,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/UploadForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/web/PDFDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/service/PDFDataService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/dao/SysModelementDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/service/SysModelementService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappings/modules/modelement/SysModelementDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java" />
       </list>
     </option>
   </component>
@@ -173,7 +143,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -193,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,7 +214,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jeesite" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="PDFData" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -255,29 +224,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jeesite" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="PDFData" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="uploadPDF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="uploadPDF" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -285,6 +233,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappings" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappings" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="modelement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -339,12 +314,24 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="makePDF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="modelement" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -624,7 +611,10 @@
       <workItem from="1522476772203" duration="149000" />
       <workItem from="1522552878782" duration="13112000" />
       <workItem from="1522727404736" duration="3365000" />
-      <workItem from="1522833882505" duration="1143000" />
+      <workItem from="1522833882505" duration="5563000" />
+      <workItem from="1523017287966" duration="3854000" />
+      <workItem from="1523151062671" duration="764000" />
+      <workItem from="1523234305762" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="注意系统的缓存问题 新添加了新建行政机构的功能而且同时模版次数表会相对应增加">
       <created>1521624475890</created>
@@ -899,11 +889,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522820344421</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="成功嵌入，还需要自动注入特别元素和确定一些固定元素。">
+      <created>1522835451588</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1522835451588</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138414000" />
+    <option name="totallyTimeSpent" value="148530000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -927,18 +924,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42910448" sideWeight="0.72317594" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44117647" sideWeight="0.72317594" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32089552" sideWeight="0.48855507" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31965175" sideWeight="0.48855507" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3544776" sideWeight="0.74034333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34398976" sideWeight="0.74034333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28898427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3018598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -994,7 +991,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="创建机构的同时为他们同时在服务器上同时创建相关的文件夹存放PDF的模版，暂时可以结合上传的功能。" />
     <MESSAGE value="删除了前面的新建机构的时候需要新建文件夹的功能，直接每个可以上传模版用户，可以查阅自己的文件夹。" />
     <MESSAGE value="完成各机构模版上传目录结构组成。" />
     <MESSAGE value="文件审查功能大部分完成，还需要完善一些功能逻辑。" />
@@ -1019,92 +1015,36 @@
     <MESSAGE value="日更新。" />
     <MESSAGE value="导入PDF制作模版页面，js导入还需要修改。" />
     <MESSAGE value="修改了路径。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了路径。" />
+    <MESSAGE value="成功嵌入，还需要自动注入特别元素和确定一些固定元素。" />
+    <option name="LAST_COMMIT_MESSAGE" value="成功嵌入，还需要自动注入特别元素和确定一些固定元素。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="55" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="912" column="25" lean-forward="false" selection-start-line="912" selection-start-column="25" selection-end-line="912" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/modelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/jquery-1.7.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/jquery.media.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/web/CKFinderConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="62" column="59" lean-forward="false" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ckfinder.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ckfinder/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sysmod/modTimesList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/OfficeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/ElementList.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/utils/DictUtils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1230,9 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
           <caret line="122" column="4" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
-          <folding>
-            <element signature="e#5785#5807#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,9 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="28" column="54" lean-forward="false" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-          <folding>
-            <marker date="1522664359418" expanded="true" signature="1617:1623" ph="&amp;nbsp;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1309,9 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-          <folding>
-            <marker date="1522388805383" expanded="true" signature="2159:2176" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1319,7 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="33" column="123" lean-forward="false" selection-start-line="33" selection-start-column="123" selection-end-line="33" selection-end-column="143" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,32 +1292,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <marker date="1522054572770" expanded="true" signature="1777:1794" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/PDFData/web/PDFDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="148">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/modelement/sysModelementCheckList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/utils/EmailUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/persistence/CrudDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/service/CrudService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/dao/SysModelementDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/modelement/SysModelementDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="93" column="46" lean-forward="false" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+          <folding>
+            <marker date="1523235203525" expanded="true" signature="887:1022" ph="SELECT FROM sys_modelement" />
+            <marker date="1523235203525" expanded="true" signature="5321:5737" ph="INSERT INTO sys_modelement... " />
+            <marker date="1523235203525" expanded="true" signature="5775:6066" ph="UPDATE sys_m... " />
+            <marker date="1523235203525" expanded="true" signature="6104:6182" ph="UPDATE sys_m... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/modelement/sysModelementList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/service/SysModelementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="73" column="63" lean-forward="false" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/modelement/web/SysModelementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="150">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="490" column="71" lean-forward="false" selection-start-line="490" selection-start-column="71" selection-end-line="490" selection-end-column="71" />
+        <state relative-caret-position="134">
+          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
           <folding>
             <marker date="1522835278295" expanded="true" signature="17080:17105" ph="..." />
             <marker date="1522835278295" expanded="true" signature="18487:18512" ph="..." />

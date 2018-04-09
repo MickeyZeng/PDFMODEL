@@ -20,4 +20,6 @@ public interface SysModelementDao extends CrudDao<SysModelement> {
     public List<SysModelement> findCheckPage(SysModelement sysModelement);
 
     SysModelement getByUser(String id);
+
+    List<SysModelement> findListByUserType(SysModelement sysModelement);
 }

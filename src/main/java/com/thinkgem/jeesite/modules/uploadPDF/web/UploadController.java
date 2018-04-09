@@ -1,6 +1,7 @@
 package com.thinkgem.jeesite.modules.uploadPDF.web;
 
 import com.thinkgem.jeesite.common.web.BaseController;
+import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
 import com.thinkgem.jeesite.modules.uploadPDF.Service.UploadService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,10 @@ public class UploadController extends BaseController{
 
     @RequiresPermissions("uploadPDF:Data:view")
     @RequestMapping(value = {"make"})
-    public String make(){ return "modules/makePDF/printPDF";}
+    public String make(){
+        //获取数据库里面该公司的元素
+//        uploadService.findElementByComId(UserUtils.getUser());
+        return "modules/makePDF/printPDF";
+    }
 
 }
