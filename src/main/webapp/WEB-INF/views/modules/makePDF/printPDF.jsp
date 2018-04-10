@@ -60,6 +60,12 @@
         }
         code += '</ul>';
         div1.innerHTML = code ;
+
+        var flagUse = ${flag};
+        if(flagUse == "0"){
+            document.getElementById("downloadPDF").disabled = true;
+            alert("模版使用次数已用完！请联系相关的管理员申请模版次数！无法成功创建PDF模版！");
+        }
     });
 
     //自动填充工具栏（util）的div的排版位置
@@ -687,47 +693,52 @@
 
         <%--PDF生成格式设置(hezijian6338)--%>
         <div id="setPdf_makeup" class="_util">
-            PDF布局形式:
-            <select id="LorP">
-                <option value=" " selected="selected">选择形式</option>
-                <option value="l">横版</option>
-                <option value="p">竖版</option>
-            </select>
-            PDF大小:
-            <select id="pdfSize">
-                <option value=" " selected="selected">选择大小</option>
-                <option value="a10">A10</option>
-                <option value="a9">A9</option>
-                <option value="a8">A8</option>
-                <option value="a7">A7</option>
-                <option value="a6">A6</option>
-                <option value="a5">A5</option>
-                <option value="a4">A4</option>
-                <option value="a3">A3</option>
-                <option value="a2">A2</option>
-                <option value="a1">A1</option>
-                <option value="a0">A0</option>
-                <option value="b10">B10</option>
-                <option value="b9">B9</option>
-                <option value="b8">B8</option>
-                <option value="b7">B7</option>
-                <option value="b6">B6</option>
-                <option value="b5">B5</option>
-                <option value="b4">B4</option>
-                <option value="b3">B3</option>
-                <option value="b2">B2</option>
-                <option value="b1">B1</option>
-                <option value="b0">B0</option>
-            </select>
-            <button id="downloadPDF" class="bttn-unite bttn-xs bttn-primary" onclick="print()">下载PDF</button>
-            <button id="saveTxt" class="bttn-unite bttn-xs bttn-primary" onclick="saveTxt()">下载图片</button>
-            <input id="xFilePath" name="FilePath" type="text" size="60" style="display: none"/>
-            <%--ui风格按钮--%>
-            <button class="bttn-unite bttn-xs bttn-primary" onclick="BrowseServer('xFilePath');">上传组件
-            </button>
-            <button class="bttn-unite bttn-xs bttn-primary" onclick="viewBS('证照模板文件夹:/');">查看历史模板</button>
-            <%--<input type="button" id="downloadPDF" onclick="print()" value="下载PDF"/>--%>
-            <%--<input type="button" id="saveTxt" onclick="saveTxt()" value="下载图片"/>--%>
+            <div>
+                PDF布局形式:
+                <select id="LorP">
+                    <option value=" " selected="selected">选择形式</option>
+                    <option value="l">横版</option>
+                    <option value="p">竖版</option>
+                </select>
+                PDF大小:
+                <select id="pdfSize">
+                    <option value=" " selected="selected">选择大小</option>
+                    <option value="a10">A10</option>
+                    <option value="a9">A9</option>
+                    <option value="a8">A8</option>
+                    <option value="a7">A7</option>
+                    <option value="a6">A6</option>
+                    <option value="a5">A5</option>
+                    <option value="a4">A4</option>
+                    <option value="a3">A3</option>
+                    <option value="a2">A2</option>
+                    <option value="a1">A1</option>
+                    <option value="a0">A0</option>
+                    <option value="b10">B10</option>
+                    <option value="b9">B9</option>
+                    <option value="b8">B8</option>
+                    <option value="b7">B7</option>
+                    <option value="b6">B6</option>
+                    <option value="b5">B5</option>
+                    <option value="b4">B4</option>
+                    <option value="b3">B3</option>
+                    <option value="b2">B2</option>
+                    <option value="b1">B1</option>
+                    <option value="b0">B0</option>
+                </select>
+            </div>
+            <div>
+                    <button id="downloadPDF" class="bttn-unite bttn-xs bttn-primary" onclick="print()">下载PDF</button>
+
+                    <button id="saveTxt" class="bttn-unite bttn-xs bttn-primary" onclick="saveTxt()">下载图片</button>
+                    <input id="xFilePath" name="FilePath" type="text" size="60" style="display: none"/>
+                    <%--ui风格按钮--%>
+                    <button class="bttn-unite bttn-xs bttn-primary" onclick="BrowseServer('xFilePath');">上传组件
+                    </button>
+                    <button class="bttn-unite bttn-xs bttn-primary" onclick="viewBS('证照模板文件夹:/');">查看历史模板</button>
+                    <%--<input type="button" id="downloadPDF" onclick="print()" value="下载PDF"/>--%>
+                    <%--<input type="button" id="saveTxt" onclick="saveTxt()" value="下载图片"/>--%>
+            </div>
         </div>
 
         <!--提供上传文件(hezijian6338)暂时取消使用-->
@@ -1482,6 +1493,20 @@
 
             }
         });
+
+        $.ajax({
+            //要用post方式
+            type: "post",
+            //方法所在页面和方法名
+            url: "${ctx}/uploadPDF/upload/reduceTimes",
+            success: function() {
+                //alert("成功了！！！");
+            },
+            error: function() {
+                //alert("失败了！！！");
+            }
+        });
+
     }
 
 

@@ -4,12 +4,14 @@ import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.modules.modelement.entity.SysModelement;
 import com.thinkgem.jeesite.modules.modelement.service.SysModelementService;
 import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
+import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
 import com.thinkgem.jeesite.modules.uploadPDF.Service.UploadService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +36,9 @@ public class UploadController extends BaseController{
     @RequiresPermissions("uploadPDF:Data:view")
     @RequestMapping(value = {"make"})
     public String make(Model model){
+        int flag = 0 ;
         //获取数据库里面该公司的元素
+        ModTimes modTimes = new ModTimes();
         SysModelement sysModelement = new SysModelement();
         sysModelement.setOffice(UserUtils.getUser().getOffice());
         List<SysModelement> list = uploadService.findElementByComId(sysModelement);
@@ -52,7 +56,18 @@ public class UploadController extends BaseController{
         String IDs = String.join(",",PDFIDs);
         model.addAttribute("elementNames",element);
         model.addAttribute("PDFIDs",IDs);
+
+        modTimes.setCompany(UserUtils.getUser().getCompany());
+        flag = uploadService.checkUse(modTimes);
+        model.addAttribute("flag",flag);
         return "modules/makePDF/printPDF";
     }
 
+    @ResponseBody
+    @RequestMapping(value = {"reduceTimes"})
+    public void reduceTimes(){
+        ModTimes modTimes = new ModTimes();
+        modTimes.setCompany(UserUtils.getUser().getCompany());
+        uploadService.reduce(modTimes);
+    }
 }
