@@ -96,10 +96,8 @@ public class SystemService extends BaseService implements InitializingBean {
 		user.setPage(page);
 		// 执行分页查询
 		if(user.getUserType().equals("2")) {
-			System.out.println("********");
 			page.setList(userDao.findComList(user));
 		}else{
-			System.out.println("!!!!!!!");
 			page.setList(userDao.findList(user));
 		}
 		return page;
@@ -117,7 +115,6 @@ public class SystemService extends BaseService implements InitializingBean {
 	public void updateCheck(User user) {
 		user.setLoginFlag("1");
 		userDao.update(user);
-		System.out.println(user.getId() + "*****" + user.getLoginFlag());
 		// 清除用户缓存
 		UserUtils.clearCache(user);
 	}

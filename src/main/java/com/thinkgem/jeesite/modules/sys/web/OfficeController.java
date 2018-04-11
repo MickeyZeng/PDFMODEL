@@ -8,10 +8,12 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sun.javafx.scene.control.skin.VirtualFlow;
 import com.thinkgem.jeesite.modules.sys.service.SystemService;
 import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
 import com.thinkgem.jeesite.modules.sysmod.service.ModTimesService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -100,12 +102,23 @@ public class OfficeController extends BaseController {
 					size++;
 				}
 			}
-			office.setCode(office.getParent().getCode() + StringUtils.leftPad(String.valueOf(size > 0 ? size+1 : 1), 3, "0"));
+			int length = String.valueOf(size).length();
+			int AllLength = office.getParent().getCode().length();
+			//判断是否是系统总公司直接添加的下级机构
+			if(office.getParentId().equals("1")){
+				office.setCode(UserUtils.reverse(StringUtils.leftPad(String.valueOf(size > 0 ? size + 1 : 1), AllLength, "0")));
+			}else {
+				//如果是二级公司新建的下级机构使用这种算法计算排列号
+				office.setCode(office.getParent().getCode().substring(0, AllLength - length) + StringUtils.leftPad(String.valueOf(size > 0 ? size + 1 : 1), length, "0"));
+				//office.setCode(office.getParent().getCode() + StringUtils.leftPad(String.valueOf(size > 0 ? size+1 : 1), 6, "0"));
+			}
 		}
 		model.addAttribute("office", office);
 		return "modules/sys/officeForm";
 	}
-	
+
+
+
 	@RequiresPermissions("sys:office:edit")
 	@RequestMapping(value = "save")
 	public String save(Office office, Model model, RedirectAttributes redirectAttributes) throws Exception {

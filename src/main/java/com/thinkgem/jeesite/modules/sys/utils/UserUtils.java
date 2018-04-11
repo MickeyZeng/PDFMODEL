@@ -294,5 +294,15 @@ public class UserUtils {
 //		}
 //		return new HashMap<String, Object>();
 //	}
+
+	public static String reverse(String str){
+		String str1 = "";
+		StringBuffer sb = new StringBuffer(str);
+		for (int i = sb.length()-1 ; i >= 0 ; i--){
+			str1 += sb.charAt(i);
+		}
+		System.out.println(str1);
+		return str1;
+	}
 	
 }
