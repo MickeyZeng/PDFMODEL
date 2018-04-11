@@ -90,7 +90,6 @@ public class SystemService extends BaseService implements InitializingBean {
 	}
 	
 	public Page<User> findUser(Page<User> page, User user) {
-		System.out.println(user.getUserType() + "**" + user.getCompany().getId());
 		// 生成数据权限过滤条件（dsf为dataScopeFilter的简写，在xml中使用 ${sqlMap.dsf}调用权限SQL）
 		user.getSqlMap().put("dsf", dataScopeFilter(user.getCurrentUser(), "o", "a"));
 		// 设置分页参数

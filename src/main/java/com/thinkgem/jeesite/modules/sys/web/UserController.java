@@ -69,8 +69,9 @@ public class UserController extends BaseController {
 	@RequestMapping(value = {"list", ""})
 	public String list(User user, HttpServletRequest request, HttpServletResponse response, Model model) {
 		user.setUserType(UserUtils.getUser().getUserType());
-		user.setCompany(UserUtils.getUser().getCompany());
-		//System.out.println(user.getUserType() + "**" + user.getCompany().getId());
+		if(!(user.getUserType().equals("1"))) {
+			user.setCompany(UserUtils.getUser().getCompany());
+		}
 		Page<User> page = systemService.findUser(new Page<User>(request, response), user);
         model.addAttribute("page", page);
 		return "modules/sys/userList";
