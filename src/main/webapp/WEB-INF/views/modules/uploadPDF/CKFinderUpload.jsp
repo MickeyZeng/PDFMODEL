@@ -16,8 +16,12 @@
         <meta name="robots" content="noindex, nofollow" />
         <link href="${ctxStatic}/ckfinder/_samples/sample.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="${ctxStatic}/ckfinder/ckfinder.js"></script>
+        <script type="text/javascript" src="${ctxStatic}/ckfinder/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="${ctxStatic}/ckfinder/jquery-v1-ui.js"></script>
+        <script type="text/javascript" src="${ctxStatic}/ckfinder/jquery.media.js"></script>
 </head>
 <body>
+<div id="pdf_viewer"></div>
 <p style="padding-left: 30px; padding-right: 30px;">
     <script type="text/javascript">
 
@@ -47,7 +51,23 @@
             this.openMsgDialog( "Selected file", msg );
         }
 
+        function closeWindow() {
+            document.getElementById('pdf_viewer').innerHTML = "";
+        }
 
+        function showFile(fileUrl, data) {
+            var sFileName = this.getSelectedFile().name;
+            //alert(fileUrl);
+            var url = "/file" + fileUrl.substring(38);
+            document.getElementById('pdf_viewer').innerHTML =
+                '<span class="close cursor" onclick="closeWindow()">' + '&times;' +
+                '</span>' +
+                '<a class="media" href="' + url + '">' +
+                '</a>';
+
+            $('a.media').media({width: 800, height: 600});
+            return true;
+        }
 
         // You can use the "CKFinder" class to render CKFinder in a page:
         var finder = new CKFinder();
@@ -57,7 +77,7 @@
         finder.height = 700;
         finder.width = 950;
         // This is a sample function which is called when a file is selected in CKFinder.
-        finder.selectActionFunction = showFileInfo;
+        finder.selectActionFunction = showFile;
         //get the parameter and decide the file path
 //        finder.startupPath = "PDF:/中山大学珠海分校/计算机学院/";
 //        finder.callback = function(api){
