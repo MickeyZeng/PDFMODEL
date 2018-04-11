@@ -65,6 +65,9 @@ public class ModTimesController extends BaseController {
 		String flag = UserUtils.getUser().getUserType();
 		if(!(flag.equals("1"))){
 			ModTimes modTimes1 = modTimesService.getByUser(UserUtils.getUser().getCompany().getId());
+			if(modTimes1.getUser().getId() == null || modTimes1.getUser().getId().length() == 0){
+				modTimes1.setUser(UserUtils.getUser().getCompany().getPrimaryPerson());
+			}
 			model.addAttribute("modTimes", modTimes1);
 			return "modules/sysmod/modTimesForm";
 		}else {
