@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -207,11 +207,6 @@
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
               <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -605,14 +600,7 @@
       <workItem from="1523253138408" duration="7500000" />
       <workItem from="1523322383783" duration="6518000" />
       <workItem from="1523331477340" duration="424000" />
-      <workItem from="1523407449783" duration="2735000" />
-    </task>
-    <task id="LOCAL-00002" summary="日更新，并且添加了释放连接池缓存的问题。">
-      <created>1521679542654</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1521679542654</updated>
+      <workItem from="1523407449783" duration="2983000" />
     </task>
     <task id="LOCAL-00003" summary="完善了行政机构的删除功能，删除机构的时候，同时模版次数管理也会相对应的进行删除，同理增加也是一样。">
       <created>1521683635836</created>
@@ -950,11 +938,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523413925279</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="修改了上传模版后，双击可以查看相关的信息。">
+      <created>1523415524480</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1523415524480</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174814000" />
+    <option name="totallyTimeSpent" value="175062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1045,7 +1040,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="导入数据第二步页面新建，并获取第一步中的PDF的url地址。" />
     <MESSAGE value="上传页面 完成第二步。" />
     <MESSAGE value="测试类获取excel各种字符串。" />
     <MESSAGE value="测试类，抽取了获取方法。" />
@@ -1070,7 +1064,8 @@
     <MESSAGE value="修改了每个角色的菜单。" />
     <MESSAGE value="日更新。" />
     <MESSAGE value="修高了申请模版次数中，负责人为空，导致申请不了的BUG。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修高了申请模版次数中，负责人为空，导致申请不了的BUG。" />
+    <MESSAGE value="修改了上传模版后，双击可以查看相关的信息。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了上传模版后，双击可以查看相关的信息。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
