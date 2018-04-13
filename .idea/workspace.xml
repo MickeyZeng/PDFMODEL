@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/SystemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/SystemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/utils/UserUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/utils/UserUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/OfficeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/OfficeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jeesite/WEB-INF/views/modules/sys/userList.jsp" afterPath="$PROJECT_DIR$/target/jeesite/WEB-INF/views/modules/sys/userList.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,18 +26,28 @@
       <file leaf-file-name="userList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="630">
+              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OfficeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="175" column="24" lean-forward="false" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfficeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/OfficeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-802">
-              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="960">
+              <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -46,7 +56,7 @@
       <file leaf-file-name="UserUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/utils/UserUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
+            <state relative-caret-position="4140">
               <caret line="303" column="0" lean-forward="false" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
               <folding />
             </state>
@@ -87,7 +97,6 @@
       <find>findListByUserType</find>
       <find>specialElements</find>
       <find>specialElement</find>
-      <find>form</find>
       <find>浏览文件</find>
       <find>浏览文件夹</find>
       <find>SetFileField</find>
@@ -96,6 +105,7 @@
       <find>查看历史模版</find>
       <find>downloadPDF</find>
       <find>list</find>
+      <find>form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/common/web/CKFinderConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/modelList.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/ElementList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/PDFData/FindPDF.jsp" />
         <option value="$PROJECT_DIR$/src/test/java/com/thinkgem/jeesite/test/PDFTest.java" />
@@ -165,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/SystemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/utils/UserUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/OfficeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp" />
       </list>
     </option>
   </component>
@@ -201,6 +211,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +225,11 @@
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
               <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -252,17 +271,6 @@
               <item name="jeesite" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
@@ -348,10 +356,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -644,14 +648,9 @@
       <workItem from="1523322383783" duration="6518000" />
       <workItem from="1523331477340" duration="424000" />
       <workItem from="1523407449783" duration="3071000" />
-      <workItem from="1523425076985" duration="5683000" />
-    </task>
-    <task id="LOCAL-00005" summary="改正新建模版元素功能页面的错误。">
-      <created>1521690118695</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1521690118695</updated>
+      <workItem from="1523425076985" duration="6504000" />
+      <workItem from="1523497872946" duration="1192000" />
+      <workItem from="1523578466138" duration="1008000" />
     </task>
     <task id="LOCAL-00006" summary="创建元素功能中，完成了对归属公司和归属机构的限定。">
       <created>1521699428089</created>
@@ -989,11 +988,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523426307632</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="修改了机构代码生成的算法。">
+      <created>1523432020114</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1523432020114</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180833000" />
+    <option name="totallyTimeSpent" value="183854000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1017,9 +1023,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28606966" sideWeight="0.72317594" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28606966" sideWeight="0.72317594" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31965175" sideWeight="0.48855507" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
@@ -1037,6 +1042,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31965175" sideWeight="0.48855507" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1084,7 +1090,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="测试类，抽取了获取方法。" />
     <MESSAGE value="成功注入PDF模版 并成功生成。" />
     <MESSAGE value="日结束，休息！" />
     <MESSAGE value="注入功能完成，还有部分逻辑需要修改。" />
@@ -1109,7 +1114,8 @@
     <MESSAGE value="修改了上传模版后，双击可以查看相关的信息。" />
     <MESSAGE value="修改了角色问题" />
     <MESSAGE value="修改了管理员查看用户时候 归属公司的限制。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了管理员查看用户时候 归属公司的限制。" />
+    <MESSAGE value="修改了机构代码生成的算法。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了机构代码生成的算法。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1118,13 +1124,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="412" column="44" lean-forward="false" selection-start-line="412" selection-start-column="44" selection-end-line="412" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
@@ -1372,13 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="1503" column="14" lean-forward="true" selection-start-line="1503" selection-start-column="14" selection-end-line="1503" selection-end-column="14" />
-          <folding>
-            <marker date="1523330104477" expanded="true" signature="17025:17050" ph="..." />
-            <marker date="1523330104477" expanded="true" signature="18432:18457" ph="..." />
-            <marker date="1523330104477" expanded="true" signature="20015:20057" ph="..." />
-            <marker date="1523330104477" expanded="true" signature="21297:21319" ph="..." />
-            <marker date="1523330104477" expanded="true" signature="31071:31078" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1407,14 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521682560698" expanded="true" signature="774:894" ph="SELECT FROM mod_times" />
-            <marker date="1521682560698" expanded="true" signature="1945:2091" ph="SELECT FROM mod_times" />
-            <marker date="1521682560698" expanded="true" signature="2128:2454" ph="INSERT INTO mod_times... " />
-            <marker date="1521682560698" expanded="true" signature="2492:2697" ph="UPDATE mod_t... " />
-            <marker date="1521682560698" expanded="true" signature="2735:2808" ph="UPDATE mod_t... " />
-            <marker date="1521682560698" expanded="true" signature="2896:3084" ph="SELECT FROM mod_times" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1422,7 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="58" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,10 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-          <folding>
-            <marker date="1523415430503" expanded="true" signature="2084:2101" ph="..." />
-            <marker date="1523415430503" expanded="true" signature="2952:2959" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1461,25 +1440,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/utils/UserUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="4140">
           <caret line="303" column="0" lean-forward="false" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
           <folding />
         </state>
@@ -1487,8 +1450,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/OfficeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-802">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="960">
+          <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/shiros.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/userList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="175" column="24" lean-forward="false" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="24" />
           <folding />
         </state>
       </provider>
