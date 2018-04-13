@@ -51,20 +51,22 @@ public class SysModelementController extends BaseController {
 	@RequiresPermissions("modelement:sysModelement:view")
 	@RequestMapping(value = {"list", ""})
 	public String list(SysModelement sysModelement, HttpServletRequest request, HttpServletResponse response, Model model) {
-		if(UserUtils.getUser().getUserType().equals("1")) {
-			Page<SysModelement> page = sysModelementService.findPage(new Page<SysModelement>(request, response), sysModelement);
-			model.addAttribute("page", page);
-		}else{
+		if(UserUtils.getUser().getUserType().equals("3")){
 			sysModelement.setOffice(UserUtils.getUser().getOffice());
-			Page<SysModelement> page = sysModelementService.findPageByUserType(new Page<SysModelement>(request, response),sysModelement);
-			model.addAttribute("page", page);
+		}else if(UserUtils.getUser().getUserType().equals("2")){
+			sysModelement.setCompany(UserUtils.getUser().getCompany());
 		}
+		Page<SysModelement> page = sysModelementService.findPageByUserType(new Page<SysModelement>(request, response),sysModelement);
+		model.addAttribute("page", page);
 		return "modules/modelement/sysModelementList";
 	}
 
 	@RequiresPermissions("modelement:sysModelement:view")
 	@RequestMapping(value = "checkList")
 	public String checkList(SysModelement sysModelement, HttpServletRequest request, HttpServletResponse response, Model model) {
+		if(UserUtils.getUser().getUserType().equals("3")){
+			sysModelement.setOffice(UserUtils.getUser().getOffice());
+		}
 		Page<SysModelement> page = sysModelementService.findCheckPage(new Page<SysModelement>(request, response), sysModelement);
 		model.addAttribute("page", page);
 		return "modules/modelement/sysModelementCheckList";

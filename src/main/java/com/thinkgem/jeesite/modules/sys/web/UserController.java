@@ -88,7 +88,6 @@ public class UserController extends BaseController {
 	@RequiresPermissions("sys:user:edit")
 	@RequestMapping(value = {"updateCheck"})
 	public String updateCheck(User user,RedirectAttributes redirectAttributes) throws Exception {
-		System.out.println(user.getId() +"*****"+ user.getLoginFlag());
 		systemService.updateCheck(user);
 		systemService.sendMail(user);
 		//return "redirect:" + adminPath + "/sys/user/checkUserList";
