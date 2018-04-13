@@ -60,7 +60,7 @@
 		OR a.id = #{currentUser.office.id}
 		ORDER BY a.code
 	</select>
-			
+
 	<select id="findAllList" resultType="Office">
 		SELECT
 			<include refid="officeColumns"/>

@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.thinkgem.jeesite.common.utils.EmailUtils;
 import com.thinkgem.jeesite.common.utils.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,6 +25,9 @@ import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
 @Service
 @Transactional(readOnly = true)
 public class OfficeService extends TreeService<OfficeDao, Office> {
+
+	@Autowired
+	OfficeDao officeDao;
 
 	public List<Office> findAll() {
 		return UserUtils.getOfficeList();
@@ -66,5 +70,6 @@ public class OfficeService extends TreeService<OfficeDao, Office> {
     public void sendMail(Office office) throws Exception {
 		EmailUtils.WriteLetter(office.getEmail(),"3");
     }
+
 
 }

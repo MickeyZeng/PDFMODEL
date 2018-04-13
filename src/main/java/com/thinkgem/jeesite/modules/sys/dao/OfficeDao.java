@@ -7,6 +7,8 @@ import com.thinkgem.jeesite.common.persistence.TreeDao;
 import com.thinkgem.jeesite.common.persistence.annotation.MyBatisDao;
 import com.thinkgem.jeesite.modules.sys.entity.Office;
 
+import java.util.List;
+
 /**
  * 机构DAO接口
  * @author ThinkGem
