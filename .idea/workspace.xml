@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~$2：毕业设计中文模版.docx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/模板2：毕业设计中文模版.docx" afterPath="$PROJECT_DIR$/doc/模板2：毕业设计中文模版.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -20,7 +22,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="printPDF.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="1254" column="55" lean-forward="false" selection-start-line="1254" selection-start-column="55" selection-end-line="1254" selection-end-column="55" />
+              <folding>
+                <marker date="1524557348381" expanded="true" signature="17025:17050" ph="..." />
+                <marker date="1524557348381" expanded="true" signature="18432:18457" ph="..." />
+                <marker date="1524557348381" expanded="true" signature="20015:20057" ph="..." />
+                <marker date="1524557348381" expanded="true" signature="21297:21319" ph="..." />
+                <marker date="1524557348381" expanded="true" signature="31071:31078" ph="×" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,8 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ajax</find>
-      <find>btnImport</find>
       <find>importBox</find>
       <find>file</find>
       <find>fillTem</find>
@@ -63,6 +80,8 @@
       <find>getByLoginName</find>
       <find>findSpecialList</find>
       <find>allL</find>
+      <find>Finder</find>
+      <find>pdfSize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/Responsebody.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sysmod/web/ModTimesController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/uploadPDF/CKFinderUpload.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/SystemService.java" />
@@ -133,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/service/OfficeService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/OfficeDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/sys/dao/OfficeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp" />
       </list>
     </option>
   </component>
@@ -149,7 +168,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -169,6 +188,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -205,55 +227,6 @@
               <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,63 +251,12 @@
               <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mappings" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jeesite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jeesite-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,15 +267,15 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/mickey/document/PDFModel/jeesite-master/src/main/webapp/WEB-INF/views/modules/PDFData/FirstStep.jsp" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.thinkgem.jeesite.modules.uploadPDF.web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/static/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/static/PDFjs/css" />
       <recent name="$PROJECT_DIR$/src/main/webapp/static/PDFjs" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/webapp/static/ckfinder" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.thinkgem.jeesite.modules.uploadPDF.web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -632,14 +554,11 @@
       <workItem from="1523578466138" duration="7338000" />
       <workItem from="1523600281450" duration="7563000" />
       <workItem from="1523800635039" duration="596000" />
-      <workItem from="1523844936231" duration="116000" />
-    </task>
-    <task id="LOCAL-00010" summary="创建机构的同时为他们同时在服务器上同时创建相关的文件夹存放PDF的模版，暂时可以结合上传的功能。">
-      <created>1521769189450</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1521769189450</updated>
+      <workItem from="1523844936231" duration="144000" />
+      <workItem from="1524279477829" duration="885000" />
+      <workItem from="1524554340594" duration="4685000" />
+      <workItem from="1524617286429" duration="2188000" />
+      <workItem from="1524639015642" duration="375000" />
     </task>
     <task id="LOCAL-00011" summary="删除了前面的新建机构的时候需要新建文件夹的功能，直接每个可以上传模版用户，可以查阅自己的文件夹。">
       <created>1521777124808</created>
@@ -977,11 +896,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523803395636</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="更新论文。">
+      <created>1523862147283</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1523862147284</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198459000" />
+    <option name="totallyTimeSpent" value="206620000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1011,11 +937,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26086956" sideWeight="0.74034333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25373134" sideWeight="0.74034333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24391988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25107297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1072,7 +998,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成数据注入功能。" />
     <MESSAGE value="新建单体数据注入功能（未完成）" />
     <MESSAGE value="又是元气满满的一天！！！" />
     <MESSAGE value="模版注入功能完成，不过里面的一些页面和信息反馈还需要增加，另外最后的时候需要测试加入一些字段为空的时候，注入是否会出现问题。" />
@@ -1097,7 +1022,8 @@
     <MESSAGE value="修改了众多角色的权限功能显示问题，并修改了部分页面的资料显示范围的漏洞。" />
     <MESSAGE value="更新版本。" />
     <MESSAGE value="开始论文工作。" />
-    <option name="LAST_COMMIT_MESSAGE" value="开始论文工作。" />
+    <MESSAGE value="更新论文。" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新论文。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1237,7 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,13 +1174,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/web/Responsebody.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="1503" column="14" lean-forward="true" selection-start-line="1503" selection-start-column="14" selection-end-line="1503" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thinkgem/jeesite/modules/uploadPDF/Service/UploadService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -1338,7 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,7 +1281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="75" column="47" lean-forward="true" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1407,7 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,21 +1337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-753">
           <caret line="137" column="50" lean-forward="false" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="70" />
-          <folding>
-            <marker date="1521431402163" expanded="true" signature="5590:5815" ph="SELECT FROM sys_user" />
-            <marker date="1521431402163" expanded="true" signature="5920:6196" ph="SELECT FROM sys_user" />
-            <marker date="1521431402163" expanded="true" signature="10728:10874" ph="SELECT a.id,... sys_user" />
-            <marker date="1521431402163" expanded="true" signature="10952:11115" ph="SELECT FROM sys_user" />
-            <marker date="1521431402163" expanded="true" signature="11196:11272" ph="SELECT COUNT... sys_user" />
-            <marker date="1521431402163" expanded="true" signature="11325:11922" ph="INSERT INTO sys_user... " />
-            <marker date="1521431402163" expanded="true" signature="11975:12408" ph="UPDATE sys_u... " />
-            <marker date="1521431402163" expanded="true" signature="12466:12862" ph="UPDATE sys_u... " />
-            <marker date="1521431402163" expanded="true" signature="12931:12978" ph="DELETE FROM " />
-            <marker date="1521431402163" expanded="true" signature="13320:13537" ph="UPDATE sys_u... " />
-            <marker date="1521431402163" expanded="true" signature="13604:13670" ph="UPDATE sys_u... " />
-            <marker date="1521431402163" expanded="true" signature="13745:13841" ph="UPDATE sys_u... " />
-            <marker date="1521431402163" expanded="true" signature="13896:13968" ph="UPDATE sys_u... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1444,7 +1344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,16 +1351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <marker date="1523608663451" expanded="true" signature="1122:1238" ph="SELECT FROM sys_office" />
-            <marker date="1523608663451" expanded="true" signature="1298:1522" ph="SELECT FROM sys_office" />
-            <marker date="1523608663451" expanded="true" signature="1584:1737" ph="SELECT FROM sys_office" />
-            <marker date="1523608663451" expanded="true" signature="1808:1996" ph="SELECT FROM sys_office" />
-            <marker date="1523608663451" expanded="true" signature="2033:2770" ph="INSERT INTO sys_office... " />
-            <marker date="1523608663451" expanded="true" signature="2808:3345" ph="UPDATE sys_o... " />
-            <marker date="1523608663451" expanded="true" signature="3392:3492" ph="UPDATE sys_o... " />
-            <marker date="1523608663451" expanded="true" signature="3530:3797" ph="UPDATE sys_o... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,7 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1477,17 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1520561437556" expanded="true" signature="655:765" ph="SELECT FROM sys_menu" />
-            <marker date="1520561437556" expanded="true" signature="826:973" ph="SELECT FROM sys_menu" />
-            <marker date="1520561437556" expanded="true" signature="1042:1215" ph="SELECT a.id,... sys_menu" />
-            <marker date="1520561437556" expanded="true" signature="1277:1727" ph="SELECT DISTI... sys_menu" />
-            <marker date="1520561437556" expanded="true" signature="1765:2268" ph="INSERT INTO sys_menu... " />
-            <marker date="1520561437556" expanded="true" signature="2306:2656" ph="UPDATE sys_m... " />
-            <marker date="1520561437556" expanded="true" signature="2703:2801" ph="UPDATE sys_m... " />
-            <marker date="1520561437556" expanded="true" signature="2843:2900" ph="UPDATE sys_m... " />
-            <marker date="1520561437556" expanded="true" signature="2938:3203" ph="UPDATE sys_m... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1510,6 +1387,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
           <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/makePDF/printPDF.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="1254" column="55" lean-forward="false" selection-start-line="1254" selection-start-column="55" selection-end-line="1254" selection-end-column="55" />
+          <folding>
+            <marker date="1524557348381" expanded="true" signature="17025:17050" ph="..." />
+            <marker date="1524557348381" expanded="true" signature="18432:18457" ph="..." />
+            <marker date="1524557348381" expanded="true" signature="20015:20057" ph="..." />
+            <marker date="1524557348381" expanded="true" signature="21297:21319" ph="..." />
+            <marker date="1524557348381" expanded="true" signature="31071:31078" ph="×" />
+          </folding>
         </state>
       </provider>
     </entry>
