@@ -7,9 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab411499-154c-496d-bce1-e1ac5f14e7ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~$2：毕业设计中文模版.docx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" afterPath="$PROJECT_DIR$/doc/PDF格式的证照模版证照制作管理工具的设计和实现.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/模板2：毕业设计中文模版.docx" afterPath="$PROJECT_DIR$/doc/模板2：毕业设计中文模版.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
@@ -558,14 +555,7 @@
       <workItem from="1524279477829" duration="885000" />
       <workItem from="1524554340594" duration="4685000" />
       <workItem from="1524617286429" duration="2188000" />
-      <workItem from="1524639015642" duration="375000" />
-    </task>
-    <task id="LOCAL-00011" summary="删除了前面的新建机构的时候需要新建文件夹的功能，直接每个可以上传模版用户，可以查阅自己的文件夹。">
-      <created>1521777124808</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1521777124808</updated>
+      <workItem from="1524639015642" duration="389000" />
     </task>
     <task id="LOCAL-00012" summary="日更新。">
       <created>1522025015051</created>
@@ -903,11 +893,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523862147284</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="更新论文。">
+      <created>1524639397972</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1524639397973</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206620000" />
+    <option name="totallyTimeSpent" value="206634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
