@@ -2156,7 +2156,7 @@ INSERT INTO `sys_role_office` VALUES ('7', '9');
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
-  `id` varchar(64) NOT NULL COMMENT '编号',
+  `id` varchar(64) NOT NULL COMMENT 'gsh',
   `company_id` varchar(64) NOT NULL COMMENT '归属公司',
   `office_id` varchar(64) NOT NULL COMMENT '归属部门',
   `login_name` varchar(100) NOT NULL COMMENT '登录名',

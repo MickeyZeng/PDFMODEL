@@ -26,7 +26,6 @@ public class UploadController extends BaseController{
     @Autowired
     SysModelementService sysModelementService;
 
-    @RequiresPermissions("uploadPDF:Data:view")
     @RequestMapping(value = {""})
     public String index() {
         //显示查看模版页面
