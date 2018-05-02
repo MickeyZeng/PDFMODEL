@@ -120,6 +120,11 @@
 		WHERE id = #{id}
 	</update>
 
+	<delete id="deleteDate" parameterType="ModTimes">
+		DELETE FROM mod_times
+		WHERE id = #{id}
+	</delete>
+
 	<select id="getByComId" resultType="ModTimes" parameterType="ModTimes">
 		SELECT
 		<include refid="modTimesColumns"></include>

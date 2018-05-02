@@ -47,18 +47,23 @@ public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 	
 	@Transactional(readOnly = false)
 	public void delete(ModTimes modTimes) {
-		super.delete(modTimes);
+		modTimesDao.deleteDate(modTimes);
+		//super.delete(modTimes);
 	}
 
 	@Transactional(readOnly = false)
 	public void updateTimes(ModTimes modTimes) {
 		ModTimes times = modTimesDao.getByComId(modTimes);
-		int i = Integer.parseInt(times.getTimes());
-		int j = Integer.parseInt(modTimes.getTimes());
-		modTimes.setTimes(Integer.toString(i+j));
-		modTimes.setId(times.getId());
-		modTimes.preUpdate();
-		modTimesDao.update(modTimes);
+		if(times==null) {
+			save(modTimes);
+		}else {
+			int i = Integer.parseInt(times.getTimes());
+			int j = Integer.parseInt(modTimes.getTimes());
+			modTimes.setTimes(Integer.toString(i + j));
+			modTimes.setId(times.getId());
+			modTimes.preUpdate();
+			modTimesDao.update(modTimes);
+		}
 	}
 
 	public ModTimes getByUser(String id) {

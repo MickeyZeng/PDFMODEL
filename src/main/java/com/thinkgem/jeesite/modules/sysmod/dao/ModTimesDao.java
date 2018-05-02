@@ -28,4 +28,10 @@ public interface ModTimesDao extends CrudDao<ModTimes> {
      */
     ModTimes getByUser(String id);
 
+    /**
+     * 直接删除数据从数据库中
+     * @param modTimes
+     * @return
+     */
+    public int deleteDate(ModTimes modTimes);
 }
