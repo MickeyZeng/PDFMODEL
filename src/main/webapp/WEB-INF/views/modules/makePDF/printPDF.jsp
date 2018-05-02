@@ -1,4 +1,5 @@
-<%@ page import="java.io.File" %><%--
+<%@ page import="java.io.File" %>
+<%@ page import="com.thinkgem.jeesite.modules.sys.utils.UserUtils" %><%--
   Created by IntelliJ IDEA.
   User: mickey
   Date: 2018/4/3
@@ -426,7 +427,7 @@
                 } else if (ui.helper.hasClass("othersElement")) {
 
                     <!--第七个组件的生成 图片的拖拉(Mickey)-->
-                    var fileName = "/file/"+ui.helper.attr("id").substring(38);
+                    var fileName = "/file/1/Group"+ui.helper.attr("id").substring(7);
                     //alert(fileName);
                     var el = $("<div class='printComponents picComponents'  onmousedown='setIndex(event,this)' tabindex='0'></div>");
 
@@ -445,7 +446,6 @@
                     }).draggable({
                         containment: "#printf"
                     }).appendTo("#printf");
-
                 } else {
                     <!--第八个组件的生成 一些其他组件的生成(Mickey)-->
 
@@ -533,10 +533,13 @@
                     //Windows的文件目录
                     //String realpath = "E:\\photo\\upload\\1\\modelPhoto\\";
 
-                    //Mac的文件目录
-                    String realpath = "/Users/Macx/github/RC_Work/GECS/ckfinder/_source/CKFinder for Java/WebApp/target/CKFinderJava-2.6.2.1/CKFinderJava/userfiles/modelPhoto/";
-
-                    //System.out.println(realpath);
+                    //Mac的文件目录合并路路径
+                    String department = UserUtils.getUser().getCompany().getName();
+                    String office = UserUtils.getUser().getOffice().getName();
+                    String realpath = "/Users/mickey/document/PDFModel/CKFile/1/Group/"+ department + "/Group/" + office + "/Pictures/";
+                    String path = realpath.substring(39);
+                    //System.out.println(realpath+"Here is the point!!");
+                    System.out.println(path);
                     File d = new File(realpath);
                     if (d.exists()) {
                         File list[] = d.listFiles();
@@ -545,7 +548,7 @@
                             int end = filename.lastIndexOf("");
                             String realName = filename.substring(0, end);
                             //System.out.println(realName);		//成功显示当前文件夹的文件名字
-                            out.println("<div class='components othersElement' id=" + filename + ">" + realName + "</div>");
+                            out.println("<div class='components othersElement' id=" + path + filename + ">" + realName + "</div>");
                         }
                     }
                 %>
