@@ -7,6 +7,8 @@ import com.thinkgem.jeesite.common.persistence.CrudDao;
 import com.thinkgem.jeesite.common.persistence.annotation.MyBatisDao;
 import com.thinkgem.jeesite.modules.sysmod.entity.ModTimes;
 
+import java.util.List;
+
 /**
  * 设计模版次数DAO接口
  * @author Mickey_zjq
@@ -34,4 +36,25 @@ public interface ModTimesDao extends CrudDao<ModTimes> {
      * @return
      */
     public int deleteDate(ModTimes modTimes);
+
+    /**
+     * 从数据库读取还没有审核的信息
+     * @param modTimes
+     * @return
+     */
+    List<ModTimes> findCheckList(ModTimes modTimes);
+
+    /**
+     * 审核信息，将信息转为可用
+     * @param modTimes
+     * @return
+     */
+    void updateCheck(ModTimes modTimes);
+
+    /**
+     * 保存审核信息
+     * @param modTimes
+     * @return
+     */
+    void saveCheck(ModTimes modTimes);
 }

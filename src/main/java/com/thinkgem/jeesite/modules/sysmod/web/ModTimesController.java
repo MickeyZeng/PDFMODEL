@@ -82,8 +82,8 @@ public class ModTimesController extends BaseController {
 		if (!beanValidator(model, modTimes)){
 			return form(modTimes, model);
 		}
-		modTimesService.save(modTimes);
-		addMessage(redirectAttributes, "保存设计模版次数成功");
+		modTimesService.saveCheck(modTimes);
+		addMessage(redirectAttributes, "申请设计模版次数成功");
 		return "redirect:"+Global.getAdminPath()+"/sysmod/modTimes/?repage";
 	}
 	
@@ -102,4 +102,28 @@ public class ModTimesController extends BaseController {
 		addMessage(redirectAttributes, "申请模版次数增加成功");
 		return "redirect:" + Global.getAdminPath() + "/sysmod/modTimes/?repage";
 	}
+
+	@RequiresPermissions("sysmod:modTimes:edit")
+	@RequestMapping(value = "check")
+	public String check(ModTimes modTimes, HttpServletRequest request, HttpServletResponse response, Model model){
+		//显示模版审核页面 中间需要添加从数据库中提取还没审核的数据出来。
+		Page<ModTimes> page = modTimesService.findcheckPage(new Page<ModTimes>(request, response), modTimes);
+		model.addAttribute("page", page);
+		return "modules/sysmod/modTimesCheckList";
+	}
+
+	@RequiresPermissions("sysmod:modTimes:view")
+	@RequestMapping(value = "checkForm")
+	public String checkForm(ModTimes modTimes, Model model){
+		model.addAttribute("modTimes", modTimes);
+		return "modules/sysmod/modTimesCheckForm";
+	}
+
+	@RequiresPermissions("sysmod:modTimes:view")
+	@RequestMapping(value = "checkPass")
+	public String checkPass(ModTimes modTimes, Model model){
+		modTimesService.check(modTimes);
+		return "modules/sysmod/modTimesCheckList";
+	}
+
 }

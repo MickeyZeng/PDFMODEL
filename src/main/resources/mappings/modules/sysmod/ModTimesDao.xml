@@ -50,7 +50,28 @@
 			</otherwise>
 		</choose>
 	</select>
-	
+
+	<select id="findCheckList" resultType="ModTimes">
+		SELECT
+		<include refid="modTimesColumns"/>
+		FROM mod_times a
+		<include refid="modTimesJoins"/>
+		<where>
+			a.del_flag = "1"
+			<if test="company != null and company.id != null and company.id != ''">
+				AND a.company_id = #{company.id}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+
 	<select id="findAllList" resultType="ModTimes">
 		SELECT 
 			<include refid="modTimesColumns"/>
@@ -102,7 +123,33 @@
 			#{delFlag}
 		)
 	</insert>
-	
+
+	<insert id="saveCheck">
+		INSERT INTO mod_times(
+		id,
+		company_id,
+		user_id,
+		times,
+		create_by,
+		create_date,
+		update_by,
+		update_date,
+		remarks,
+		del_flag
+		) VALUES (
+		#{id},
+		#{company.id},
+		#{user.id},
+		#{times},
+		#{createBy.id},
+		#{createDate},
+		#{updateBy.id},
+		#{updateDate},
+		#{remarks},
+		"1"
+		)
+	</insert>
+
 	<update id="update">
 		UPDATE mod_times SET 	
 			company_id = #{company.id},
@@ -113,7 +160,18 @@
 			remarks = #{remarks}
 		WHERE id = #{id}
 	</update>
-	
+
+	<update id="updateCheck">
+		UPDATE mod_times SET
+		company_id = #{company.id},
+		user_id = #{user.id},
+		times = #{times},
+		update_by = #{updateBy.id},
+		update_date = #{updateDate},
+		remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+
 	<update id="delete">
 		UPDATE mod_times SET 
 			del_flag = #{DEL_FLAG_DELETE}

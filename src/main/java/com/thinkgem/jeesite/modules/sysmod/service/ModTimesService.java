@@ -57,12 +57,14 @@ public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 		if(times==null) {
 			save(modTimes);
 		}else {
-			int i = Integer.parseInt(times.getTimes());
-			int j = Integer.parseInt(modTimes.getTimes());
-			modTimes.setTimes(Integer.toString(i + j));
-			modTimes.setId(times.getId());
+//			int i = Integer.parseInt(times.getTimes());
+//			int j = Integer.parseInt(modTimes.getTimes());
+//			modTimes.setTimes(Integer.toString(i + j));
+//			modTimes.setId(times.getId());
+			modTimes.preInsert();
 			modTimes.preUpdate();
-			modTimesDao.update(modTimes);
+//			modTimesDao.update(modTimes);
+			saveCheck(modTimes);
 		}
 	}
 
@@ -78,5 +80,22 @@ public class ModTimesService extends CrudService<ModTimesDao, ModTimes> {
 		for (int i = 0 ; i < modTimesList.size() ; i++) {
 			modTimesDao.delete(modTimesList.get(i));
 		}
+	}
+
+	public Page<ModTimes> findcheckPage(Page<ModTimes> modTimesPage, ModTimes modTimes) {
+		modTimes.setPage(modTimesPage);
+		modTimesPage.setList(modTimesDao.findCheckList(modTimes));
+		return modTimesPage;
+	}
+
+	public void check(ModTimes modTimes) {
+		modTimesDao.updateCheck(modTimes);
+	}
+
+	public void saveCheck(ModTimes modTimes) {
+		ModTimes modTimes1;
+		modTimes1 = modTimes;
+		modTimes1.setRemarks(modTimes.getCompany().getId());
+		modTimesDao.saveCheck(modTimes1);
 	}
 }
